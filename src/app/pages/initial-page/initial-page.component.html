@@ -1,23 +1,31 @@
 <div id="container-initial-page" class="bg-color-blue-dark">
-  <div class="container-photos-cards">
+  <div class="container-photos-cards bg-gradient-magenta-blue">
     <section class="content-initial-page">
       <div class="initial-page-define-size">
-        <div class="container-logo-text padding-default-mobile">
-          <section class="content-logo-header">
-            <img class="cursor-pointer" src="/assets/images/logo.png" alt="Logo Devotee" srcset="" (click)="navigateTo(routeApp.LANDING_PAGE)">
-            <span class="font-booster-next-bold color-white title-logo cursor-pointer" (click)="navigateTo(routeApp.LANDING_PAGE)">Devotee</span>
-            <span class="sign-in-mobile color-magenta-soft font-booster-next-bold cursor-pointer" (click)="clickopenMobileSignIn()">{{ dataTexts?.login }}</span>
-          </section>
-          <p  class="font-booster-next-regular color-white">{{ dataTexts?.firstPage?.title }}</p>
-
-        </div>
         <div class="container-actions padding-default-mobile">
           <router-outlet></router-outlet>
+        </div>
+        <div class="container-logo-text padding-default-mobile">
+          <section class="content-logo-header">
+            <mat-icon class="cursor-pointer" svgIcon="logo"></mat-icon>
+            <!-- <img class="cursor-pointer" src="/assets/images/logo.png" alt="Logo Devotee" srcset="" (click)="navigateTo(routeApp.LANDING_PAGE)"> -->
+            <span class="font-booster-next-bold color-blue-medium-logo title-logo cursor-pointer" (click)="navigateTo(routeApp.LANDING_PAGE)">The Specials</span>
+            <span class="sign-in-mobile color-blue-medium-logo font-booster-next-bold cursor-pointer" (click)="clickopenMobileSignIn()">{{ dataTexts?.login }}</span>
+          </section>
+          <p  class="font-booster-next-regular color-grey-medium f-size-28 ">
+            
+            <span>{{ dataTexts?.firstPage?.title }} </span>
+            <span class="color-purple-medium">{{ dataTexts?.firstPage?.special }} </span>
+            <span>{{ dataTexts?.firstPage?.as }} </span>
+            <span class="color-blue-medium-logo">{{ dataTexts?.firstPage?.you }} </span>
+          
+          </p>
+
         </div>
       </div>
 
     </section>
-      <app-footer></app-footer>
+      <app-footer backgroudColor="bg-footer-purple-soft"></app-footer>
   </div>
 
 </div>

@@ -165,3 +165,18 @@ footer{
   }
 
 }
+.bg-footer-purple-soft {
+  .container-footer {
+    h2 {
+      color: $blue-medium-logo;
+    }
+    p {
+      color: $grey-medium;
+    }
+    #copyright {
+      color: $grey-medium;
+
+    }
+  }
+
+}

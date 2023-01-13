@@ -1,11 +1,14 @@
 {
   "pt": {
     "firstPage": {
-     "title": "O maior aplicativo de relacionamento feito para pessoas especiais"
+     "title": "conheça aqui alguém tão",
+     "as": "quanto",
+     "special": "especial",
+     "you": "você"
     },
     "policyPrivacy": "Política de Privacidade",
     "termsOfUse": "Termos de Uso",
-    "copyright": "Devotee. Todos direitos reservados.",
+    "copyright": "The Specials. Todos direitos reservados.",
     "getApp": "Baixe o aplicativo!",
     "txtPrivacyAndTerms": "Ao continuar, você concorda com nossos",
     "and": "e",
@@ -23,17 +26,17 @@
         "text": "O maior aplicativo de relacionamento feito para pessoas especiais"
       },
       "simpleMatch": "Agora ficou fácil de conhecer sua cara metade",
-      "devoteeShop": {
+      "DevoteeShop": {
         "title": "Conheça o Devotee Shop",
         "text": "Adquira produtos Devotee para demonstrar seu apoio."
       },
-      "devoteeVideo": {
+      "DevoteeVideo": {
         "title": "Acompanhe o Devotee"
       },
       "followUs": {
         "title": "Siga-nos"
       },
-      "devoteeMidia" : {
+      "DevoteeMidia" : {
         "title": "O Devotee na mídia"
       }
     },
@@ -576,11 +579,14 @@
   },
   "us": {
     "firstPage": {
-      "title": "The best relationship app made for special people"
+      "title": "meet someone as",
+      "as": "as",
+      "special": "special",
+      "you": "you"
     },
     "policyPrivacy": "Privacy Policy",
     "termsOfUse": "Terms of use",
-    "copyright": "Devotee. All rights reserved.",
+    "copyright": "The Specials. All rights reserved.",
     "getApp": "Get the app",
     "txtPrivacyAndTerms": "by continuing you agree with",
     "and": "and",
@@ -598,18 +604,18 @@
         "text": "The biggest app to persons with special needs."
       },
       "simpleMatch": "Now is simple meet your soulmate",
-      "devoteeShop": {
-        "title": "Meet devotee shop",
+      "DevoteeShop": {
+        "title": "Meet Devotee shop",
         "text": "Get products to show your support"
       },
-      "devoteeVideo": {
+      "DevoteeVideo": {
         "title": "Follow Devotee"
       },
       "followUs": {
         "title": "Follow-us"
       },
-      "devoteeMidia" : {
-        "title": "The devotee in the media"
+      "DevoteeMidia" : {
+        "title": "The Devotee in the media"
       }
     },
     "signin": {

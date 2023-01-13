@@ -14,7 +14,7 @@ $gray-icons: #909090;
 $gray-icons-50: #90909080;
 
 $blue-dark: #2E4664;
-$blue-soft: #F5FCFC;
+// $blue-soft: #F5FCFC;
 $magenta-soft: #F97688;
 $magenta-soft-20: #F9768833;
 $magenta-soft-30: #F976884D;
@@ -37,6 +37,7 @@ $color-success: #007E33;
 $principal-gradient: linear-gradient(90deg, $magenta-ulta-soft 0%, $magenta-soft 100%) 0% 0% no-repeat padding-box;
 $principal-gradient-hover: linear-gradient(90deg,  $magenta-ulta-soft-hover 0%, $magenta-soft-hover 100%) 0% 0% no-repeat padding-box;
 $princiapl-background-gradient: transparent linear-gradient(180deg, $sand-soft 0%, $sand-medium 100%) 0% 0% no-repeat padding-box;
+
 .color-black {
   color: $black;
 }
@@ -52,6 +53,7 @@ $princiapl-background-gradient: transparent linear-gradient(180deg, $sand-soft 0
 .color-gray-dark {
   color: $gray-dark;
 }
+
 // backjground colors
 .bg-color-blue-dark {
   background-color: $blue-dark;
@@ -62,6 +64,40 @@ $princiapl-background-gradient: transparent linear-gradient(180deg, $sand-soft 0
 .bg-gray-ultra-light-soft {
   background-color: $gray-ultra-light-soft;
 }
+
+//new colors
+$blue-soft: #D0E0FD;
+$blue-soft-logo: #24A6F5;
+$blue-medium-logo: #4255F2;
+$blue-brand: #105EF3;
+
+$purple-soft: #E8D9FD;
+$purple-medium: #A83CF2;
+
+$white-space: #FCFCFC;
+$grey-soft: #D6D0CC;
+$grey-medium: #56504C;
+$grey-dark: #231D19;
+$red-default: #BA454C;
+$red-soft: #FF8B8B;
+$green-soft: #6FEDD6;
+$purple-brand: #8A43F2;
+
+.color-blue-soft-logo {
+  color: $blue-soft-logo;
+}
+.color-blue-medium-logo {
+  color: $blue-medium-logo;
+}
+.color-purple-medium {
+  color: $purple-medium;
+}
+.color-grey-medium {
+  color: $grey-medium;
+}
+.bg-footer-purple-soft {
+  background: $purple-soft 0% 0% no-repeat padding-box;;
+}
 .bg-gradient-magenta-blue{
-  background: transparent linear-gradient(180deg, $sand-medium 0%, $pink-soft 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, $blue-soft 0%, $purple-soft 100%) 0% 0% no-repeat padding-box;
 }
