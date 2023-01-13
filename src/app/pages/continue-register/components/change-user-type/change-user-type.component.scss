@@ -1,0 +1,56 @@
+
+@import '_custom';
+:host {
+  width: 100vw;
+}
+.container-checks {
+  display: none;
+}
+#container-change-user-type {
+  max-width: 500px;
+
+  .content-change-user-type {
+    margin: auto;
+    @include dp-flex-alignment(column, stretch, center);
+    gap: 20px;
+    mat-card {
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: none;
+    }
+    label {
+      &.container-type-data-default {
+        min-height: 170px;
+
+      }
+    }
+    .container-type-data-default {
+
+      @include dp-flex-alignment(row, initial, flex-start);
+      gap: 20px;
+      cursor: pointer;
+      .card-type-data-default {
+        @include dp-flex-alignment(row, flex-start, flex-start);
+        gap: 20px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        &.border-checked {
+          border: 1px solid $magenta-soft;
+          border-radius: 10px;
+          background: $blue-soft 0% 0% no-repeat padding-box;;
+        }
+      }
+      mat-icon {
+        font-size: 30px;
+      }
+      .container-title-text {
+        width: 100%;
+        .container-title-check {
+          @include dp-flex-alignment(row, center, space-between);
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+

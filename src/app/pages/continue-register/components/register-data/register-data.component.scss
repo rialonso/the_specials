@@ -1,0 +1,118 @@
+@import '_custom';
+@import '_mixins';
+
+:host {
+  width: 100%;
+  background: $princiapl-background-gradient;
+}
+#container-register-data {
+  .container-type-data-default {
+    padding: 0;
+  }
+  .container-register-default {
+    @include dp-flex-alignment(column, initial, initial);
+    gap: 20px;
+  }
+  .cotainer-data-register {
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  .content-register-data {
+    form {
+      @include dp-flex-alignment(column, initial, initial);
+      gap: 20px;
+    }
+    .container-profile-image {
+      .profile-img{
+        display: flex;
+        margin: 0 auto;
+        position: relative;
+        width:160px;
+        height: 100px;
+        border-radius: 8px;
+        font-size: 120px;
+        &:hover {
+          border: 1px solid $blue-dark;
+          &::before{
+            border: 1px solid $blue-dark;
+          }
+        }
+        &::after, &::before{
+          display: block;
+          position: absolute;
+        }
+
+      }
+      .content-picture {
+        @include dp-flex-alignment();
+      }
+      .photo-principal{
+        max-width: 160px;
+        mat-icon{
+          display: flex;
+          justify-content: center;
+        }
+        .avatar{
+          img{
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+    .more-pictures {
+      @include dp-flex-alignment(row, center, space-between);
+      gap: 20px;
+      flex-wrap: wrap;
+
+      .more-photos {
+        background-color: $gray-medium-soft;
+        border: 1px solid $gray-soft;
+        border-radius: 20px;
+        height: 150px;
+        min-width: 150px;
+        max-width: 150px;
+        padding: 5px;
+        box-sizing: border-box;
+        &:hover {
+          border: 1px solid $blue-dark;
+        }
+        img{
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 8px;
+          display: block;
+          max-height: 100px;
+        }
+        label {
+          width: 100%;
+          height: 100%;
+          @include dp-flex-alignment(column, flex-end, flex-end);
+
+        }
+        mat-icon {
+          width: 100%;
+          max-width: 25px;
+          height: auto;
+          color: $magenta-soft;
+          font-size: 25px;
+        }
+      }
+    }
+
+  }
+  .container-data-person {
+    .content-data-person {
+      padding: 0 15px;
+    }
+
+  }
+
+
+
+}
+

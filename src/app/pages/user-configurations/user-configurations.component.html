@@ -1,0 +1,43 @@
+<div id="container-user-settings" class="container-default-cards-register">
+  <main>
+    <mat-card class="container-title-register">
+      <div class="container-title-register cursor-pointer" (click)="return()">
+        <mat-icon class="mat-18 color-magenta-soft">arrow_back_ios</mat-icon>
+        <mat-card-title>{{dataTexts.userConfigurations.headerYourProfile}}</mat-card-title>
+      </div>
+
+    </mat-card>
+    <section class="container-cards-settings">
+      <mat-card class="card-settings" (click)="viewMyProfile()">
+        <mat-icon svgIcon="account_circle"></mat-icon>
+        <mat-card-title>{{dataTexts.userConfigurations.features.myProfile}}</mat-card-title>
+      </mat-card>
+
+      <mat-card class="card-settings" (click)="navigateTo(enumRoutes.FILTERS)">
+        <mat-icon svgIcon="interests"></mat-icon>
+        <mat-card-title>{{dataTexts.userConfigurations.features.preferences}}</mat-card-title>
+      </mat-card>
+      <mat-card class="card-settings"  (click)="changePassword()">
+        <mat-icon svgIcon="change_password"></mat-icon>
+        <mat-card-title>{{dataTexts.userConfigurations.features.changePassword}}</mat-card-title>
+      </mat-card>
+      <mat-card class="card-settings" *ngIf="false">
+        <mat-icon>delete</mat-icon>
+        <mat-card-title>{{dataTexts.userConfigurations.features.deleteAccount}}</mat-card-title>
+      </mat-card>
+      <mat-card class="card-settings" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <mat-card-title>{{dataTexts.userConfigurations.features.logout}}</mat-card-title>
+      </mat-card>
+      <mat-card class="card-settings" (click)="devoteePlus()">
+        <mat-icon>add</mat-icon>
+        <mat-card-title>Devotee <span class="color-magenta-soft">+</span></mat-card-title>
+      </mat-card>
+      <mat-card class="card-settings" >
+        <mat-icon>new_releases</mat-icon>
+        <mat-card-title>{{dataTexts.userConfigurations.features.workFeatures}}</mat-card-title>
+      </mat-card>
+    </section>
+  </main>
+</div>
+<app-principal-loading *ngIf="loading"></app-principal-loading>

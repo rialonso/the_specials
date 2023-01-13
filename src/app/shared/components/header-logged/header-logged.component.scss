@@ -1,0 +1,60 @@
+@import '_custom';
+#container-header-logged {
+  background: $sand-soft 0% 0% no-repeat padding-box;
+
+  .content-header-logged {
+    @include dp-flex-alignment(row, center, space-between);
+    padding: 15px;
+    gap: 15px;
+  }
+  .container-logo {
+    @include dp-flex-alignment();
+    .logo {
+      width: 30px;
+      height: auto;
+    }
+    p {
+      color: $white;
+      font-size: 25px;
+    }
+  }
+  .container-menu-logged{
+    @include dp-flex-alignment(row, center, flex-end);
+    gap: 30px;
+    @include min-tablet {
+      gap: 40px;
+    }
+    .container-item-menu {
+      @include dp-flex-alignment(column, center, center);
+      p {
+        font-size: 15px;
+        color: $gray-dark;
+      }
+    }
+    mat-icon{
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+    }
+    .icon-menu-logged{
+      color: $gray-dark;
+      @include min-tablet {
+        font-size: 35px;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+      &:active{
+        outline: 0;
+      }
+    }
+    .icon-route-is-active{
+      .icon-menu-logged{
+        color: $magenta-soft;
+      }
+      p {
+        color: $blue-dark;
+      }
+    }
+  }
+}

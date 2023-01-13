@@ -1,0 +1,187 @@
+@import '_custom';
+#landing-page {
+  .only-mobile {
+    @include min-tablet {
+      display: none;
+    }
+  }
+  .container-logo-login {
+    @include dp-flex-alignment(row, center, space-between);
+    background: transparent linear-gradient(180deg, $sand-medium 0%, $sand-soft 100%) 0% 0% no-repeat padding-box;;
+    .logo {
+      @include dp-flex-alignment(row, center, initial);
+      gap: 5px;
+      img {
+        width: 25px;
+        max-width: 45px;
+        height: auto;
+        @include min-tablet {
+          width: 100%;
+        }
+      }
+      .title-logo {
+        font-size: 1.2rem;
+        @include min-tablet {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .container-button-header {
+      gap: 50px;
+      .container-buttons-desk {
+        display: none;
+        @include min-tablet {
+          gap: 50px;
+        }
+      }
+      .btn-login {
+        padding: 8px 34px;
+      }
+    }
+  }
+  .container-welcome-app {
+    background: transparent linear-gradient(180deg, $sand-soft 0%, $sand-medium 100%) 0% 0% no-repeat padding-box;
+    @include min-tablet {
+      @include dp-flex-alignment(row, center, space-between);
+
+    }
+    .container-title-text {
+      gap: 40px;
+    }
+    .container-desk-register {
+      gap: 10px;
+      @media screen and (max-width: $min-tablet){
+        display: none;
+      }
+      .desk-register-title {
+        font-size: 28px
+      }
+      .btn-register-desk {
+        @include dp-flex-alignment();
+        max-width: 200px;
+      }
+    }
+
+    .container-cellphone-button {
+      .content-cellphone {
+        img {
+          width: 100%;
+          @include min-tablet {
+            max-width: 400px;
+          }
+          @include medium-tablet {
+            max-width: 600px;
+          }
+        }
+      }
+      .container-buttons-text {
+        .content-buttons {
+          padding: 0;
+          @include dp-flex-alignment(row, center, space-between);
+          @include min-tablet {
+            justify-content: flex-end;
+          }
+          .button {
+            padding: 8px 18px;
+          }
+          .buttons-download {
+            gap: 10px;
+            img {
+              height: 25px;
+              @include min-tablet {
+                height: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  h2 {
+    @include min-tablet {
+      font-size: 50px;
+    }
+  }
+  p {
+    @include min-tablet {
+      font-size: 30px;
+    }
+  }
+  .max-size {
+    max-width: 1150px;
+    margin: auto;
+  }
+  .container-devotee-shop {
+    @include dp-flex-alignment(column, flex-end, flex-end);
+    background:  transparent linear-gradient(180deg, $sand-medium 0%, $sand-soft 100%) 0% 0% no-repeat padding-box;
+
+    .container-cellphone-button {
+      @include dp-flex-alignment(row, center, space-between);
+      gap: 10px;
+      width: 100%;
+      .button {
+        @include min-tablet {
+          width: 200px;
+        }
+      }
+      img {
+        max-width: 150px;
+        @include min-tablet {
+          max-width: 400px
+        }
+        @include medium-tablet {
+          max-width: 600px;
+        }
+      }
+      .container-text-button {
+        @include dp-flex-alignment(column, flex-end, flex-end);
+        gap: 10px;
+        text-align: right;
+        .button {
+          padding: 8px 18px;
+        }
+      }
+    }
+
+  }
+  .container-devotee-video {
+    background: transparent linear-gradient(180deg, $sand-soft 0%, $sand-medium 100%) 0% 0% no-repeat padding-box;
+    .content-devotee-video {
+      gap: 30px;
+      iframe {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        @include min-tablet {
+          min-height: 500px;
+        }
+      }
+      .social-media {
+        @include dp-flex-alignment(column, center, initial);
+        .social-icons {
+          @include dp-flex-alignment();
+          gap: 10px;
+        }
+      }
+    }
+    .content-devotee-midia {
+      gap: 30px;
+      margin-top: 30px;
+      p {
+        text-align: center
+      }
+      .container-imgs {
+        @include dp-flex-alignment(row, center, center);
+        flex-wrap: wrap;
+        gap: 10px;
+        img {
+          max-width: 165px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.container-default-lp {
+  padding: 20px 30px;
+}
