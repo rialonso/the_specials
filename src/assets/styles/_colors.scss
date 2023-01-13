@@ -73,6 +73,8 @@ $blue-brand: #105EF3;
 
 $purple-soft: #E8D9FD;
 $purple-medium: #A83CF2;
+$purple-brand: #8A43F2;
+$purple-brand-hover: #8540EA;
 
 $white-space: #FCFCFC;
 $grey-soft: #D6D0CC;
@@ -81,13 +83,16 @@ $grey-dark: #231D19;
 $red-default: #BA454C;
 $red-soft: #FF8B8B;
 $green-soft: #6FEDD6;
-$purple-brand: #8A43F2;
+
 
 .color-blue-soft-logo {
   color: $blue-soft-logo;
 }
 .color-blue-medium-logo {
   color: $blue-medium-logo;
+}
+.color-blue-brand {
+  color: $blue-brand;
 }
 .color-purple-medium {
   color: $purple-medium;

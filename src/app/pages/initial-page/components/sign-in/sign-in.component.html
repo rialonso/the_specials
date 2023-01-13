@@ -3,11 +3,11 @@
     <div class="content-header-sign-in">
       <div class="title-sign-return">
         <mat-icon class="cursor-pointer" svgIcon="navigate_before" (click)="clickopenMobileSignIn(false)"></mat-icon>
-        <a class="color-blue-dark font-booster-next-bold f-size-24" >{{dataTexts.login}}</a>
+        <a class="color-blue-brand font-booster-next-bold f-size-24" >{{dataTexts.login}}</a>
       </div>
-      <div>
+      <!-- <div>
         <a class="color-magenta-soft cursor-pointer" (click)="navigateTo(routesEnum.REMEMBER)">{{dataTexts.signin.rememberPassword}}</a>
-      </div>
+      </div> -->
     </div>
 
     <form [formGroup]="formGroup" id="sign-in" class="example-form">
@@ -49,20 +49,20 @@
     <button class="button third" (click)="navigateTo(routesEnum.PRE_REGISTER)">
       {{dataTexts.buttonsSignin.btnRegister}}
     </button>
-    <div class="others-logins">
+    <!-- <div class="others-logins">
       <p class="color-blue-dark mtb-15px">{{dataTexts.or}}</p>
       <div class="container-buttons-others">
         <div class="button icon-text" id="btn-qrcode" (click)="openQrSignIn()">
           <span>{{dataTexts.buttonsSignin.btnQrCode}}</span>
           <mat-icon svgIcon="icon_qr_code" class="size-18"></mat-icon>
         </div>
-        <!-- <div class="button icon-text" (click)="loginWithGoogle()">
+        <div class="button icon-text" (click)="loginWithGoogle()">
           <mat-icon svgIcon="logo_google" class="size-18"></mat-icon>
           <span>{{dataTexts.buttonsSignin.btnGoogle}}</span>
-        </div> -->
+        </div>
       </div>
-    </div>
-    <p class="infos-about-app color-blue-dark mt-15px">
+    </div> -->
+    <!-- <p class="infos-about-app color-blue-dark mt-15px">
       {{dataTexts.txtPrivacyAndTerms}}
       <span
         class="font-booster-next-bold cursor-pointer"
@@ -75,7 +75,7 @@
         (click)="openTerms()">
         {{dataTexts.termsOfUse}}
       </span>.
-    </p>
+    </p> -->
   </section>
   <div class="container-buttons-mobile">
     <button class="button primary" (click)="clickopenMobileSignIn(false); navigateTo(routesEnum.PRE_REGISTER)">

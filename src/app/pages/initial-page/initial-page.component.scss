@@ -19,13 +19,14 @@
     justify-content: space-between;
     .initial-page-define-size {
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      flex-direction: column-reverse;
+      justify-content: space-between;
       text-align: right;
       align-items: center;
       height: 100%;
       @include min-tablet {
         flex-direction: row;
+        justify-content: space-around;
         height: 60vh;
         max-width: $max-width-contents;
         width: 100%;
@@ -52,21 +53,21 @@
         justify-content: flex-end;
       }
     }
-    mat-icon {
-      display: none;
-      @include min-tablet {
+    div {
+      @include dp-flex-alignment();
+      gap: 10px;
+      mat-icon {
         display: initial;
-        max-width: 100px;
+        max-width: 50px;
         width: 100%;
         height: auto;
-      }
-      @include min-tablet {
-        display: initial;
-        max-width: 115px;
-        width: 100%;
-        height: auto;
+        max-height: 100px;
+        @include min-tablet {
+          max-width: 115px;
+        }
       }
     }
+    
     .title-logo {
       font-size: 2rem;
       @include min-tablet {
@@ -85,6 +86,7 @@
   }
 
  .container-actions {
+    width: 100%;
   @include min-tablet {
     flex: 1;
     max-width: 500px;

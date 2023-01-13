@@ -6,7 +6,10 @@
 .content-sign-in {
   .content-header-sign-in {
     display: flex;
-    justify-content: space-between;
+    justify-content: initial;
+    @include min-tablet {
+      justify-content: center;
+    }
     .title-sign-return {
       display: flex;
       flex-direction: column;
@@ -64,4 +67,6 @@
 .infos-about-app {
   text-align: center;
 }
-
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent; 
+}
