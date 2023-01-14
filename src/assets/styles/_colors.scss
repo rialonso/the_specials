@@ -34,7 +34,6 @@ $red-error: #f44336;
 $green-info:#00DB92;
 $color-success: #007E33;
 
-$principal-gradient: linear-gradient(90deg, $magenta-ulta-soft 0%, $magenta-soft 100%) 0% 0% no-repeat padding-box;
 $principal-gradient-hover: linear-gradient(90deg,  $magenta-ulta-soft-hover 0%, $magenta-soft-hover 100%) 0% 0% no-repeat padding-box;
 $princiapl-background-gradient: transparent linear-gradient(180deg, $sand-soft 0%, $sand-medium 100%) 0% 0% no-repeat padding-box;
 
@@ -84,6 +83,7 @@ $red-default: #BA454C;
 $red-soft: #FF8B8B;
 $green-soft: #6FEDD6;
 
+$principal-gradient: transparent linear-gradient(180deg, $blue-soft 0%, $purple-soft 100%) 0% 0% no-repeat padding-box;
 
 .color-blue-soft-logo {
   color: $blue-soft-logo;
