@@ -84,7 +84,8 @@ $red-soft: #FF8B8B;
 $green-soft: #6FEDD6;
 
 $principal-gradient: transparent linear-gradient(180deg, $blue-soft 0%, $purple-soft 100%) 0% 0% no-repeat padding-box;
-
+$princiapl-background-gradient: transparent linear-gradient(180deg, $blue-soft 0%, $purple-soft 100%) 0% 0% no-repeat padding-box;
+$background-footer-secondary: $purple-soft 0% 0% no-repeat padding-box;
 .color-blue-soft-logo {
   color: $blue-soft-logo;
 }
@@ -105,4 +106,7 @@ $principal-gradient: transparent linear-gradient(180deg, $blue-soft 0%, $purple-
 }
 .bg-gradient-magenta-blue{
   background: transparent linear-gradient(180deg, $blue-soft 0%, $purple-soft 100%) 0% 0% no-repeat padding-box;
+}
+.bg-footer-secondary {
+  background: $background-footer-secondary;
 }
