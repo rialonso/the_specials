@@ -52,8 +52,8 @@
       "name": "Digite seu nome"
     },
     "buttonsSignin": {
-      "btnContinue": "Continuar",
-      "btnRegister": "Cadastrar",
+      "btnContinue": "Entrar",
+      "btnRegister": "Criar conta",
       "btnQrCode": "Continuar com",
       "btnGoogle": "Continuar com Google"
     },
@@ -630,8 +630,8 @@
       "name": "Type your name"
     },
     "buttonsSignin": {
-      "btnContinue": "Continue",
-      "btnRegister": "Register",
+      "btnContinue": "Sing in",
+      "btnRegister": "Create account",
       "btnQrCode": "Continue with",
       "btnGoogle": "Continue with Google"
     },

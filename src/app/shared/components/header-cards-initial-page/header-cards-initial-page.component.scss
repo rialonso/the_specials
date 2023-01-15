@@ -4,13 +4,15 @@
 
 
 .content-header-cards-initial-page {
-  display: flex;
-  flex-direction: column;
   gap: $s-35px;
-  .title-sign-return {
-    @include dp-flex-alignment(row, center, initial);
-    gap: 10px;
+  @include dp-flex-alignment(column, initial, initial);
 
+  .title-sign-return {
+    @include dp-flex-alignment(row, center, flex-start);
+    gap: 10px;
+    @include min-tablet {
+      justify-content: center;
+    }
   }
 
   mat-icon {

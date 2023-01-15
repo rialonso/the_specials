@@ -5,9 +5,7 @@
         <mat-icon class="cursor-pointer" svgIcon="navigate_before" (click)="clickopenMobileSignIn(false)"></mat-icon>
         <a class="color-blue-brand font-booster-next-bold f-size-24" >{{dataTexts.login}}</a>
       </div>
-      <!-- <div>
-        <a class="color-magenta-soft cursor-pointer" (click)="navigateTo(routesEnum.REMEMBER)">{{dataTexts.signin.rememberPassword}}</a>
-      </div> -->
+
     </div>
 
     <form [formGroup]="formGroup" id="sign-in" class="example-form">
@@ -76,6 +74,11 @@
         {{dataTexts.termsOfUse}}
       </span>.
     </p> -->
+    <div class="container-remember-password">
+      <!-- <div> -->
+        <a class="color-blue-brand cursor-pointer" (click)="navigateTo(routesEnum.REMEMBER)">{{dataTexts.signin.rememberPassword}}</a>
+      <!-- </div> -->
+  </div>
   </section>
   <div class="container-buttons-mobile">
     <button class="button primary" (click)="clickopenMobileSignIn(false); navigateTo(routesEnum.PRE_REGISTER)">
@@ -85,6 +88,7 @@
       {{dataTexts.signin.alreadyAccount}}
     </button>
   </div>
+
 </div>
 <app-principal-loading *ngIf="loading"></app-principal-loading>
 

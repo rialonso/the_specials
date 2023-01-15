@@ -136,10 +136,4 @@ export class RegisterComponent implements OnInit {
     }
 
   }
-  openTerms() {
-    this.dialogsService.openTerms();
-  }
-  openPrivacy() {
-    this.dialogsService.openPrivacy();
-  }
 }
