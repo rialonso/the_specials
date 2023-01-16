@@ -17,6 +17,8 @@ import { AddDataRegister } from 'src/app/state-management/register/register.acti
 import { RegisterService } from 'src/app/core/services/register/register.service';
 import { AddAllDataUser } from 'src/app/state-management/user-data/user-data.action';
 import { DialogsService } from 'src/app/shared/functions/dialogs/dialogs.service';
+import { EnumUserType } from 'src/app/shared/enum/user-types/user-type.enum';
+import { UpdateDataService } from 'src/app/core/services/update-data/update-data.service';
 
 @Component({
   selector: 'app-register',
@@ -47,6 +49,8 @@ export class RegisterComponent implements OnInit {
     private verifyEmailService: VerifyEmailService,
     private registerService: RegisterService,
     private dialogsService: DialogsService,
+    private updateDataService: UpdateDataService,
+
   ) {
     this.store.select('controlsApp')
     .pipe(takeUntil(this.destroy$))
@@ -131,8 +135,12 @@ export class RegisterComponent implements OnInit {
       this.loading = true;
       const registerData = await this.registerService.post(this.formGroup.value).toPromise();
       this.store.dispatch(new AddAllDataUser(registerData));
+      const userDataType = await this.updateDataService.post({account_type: EnumUserType.SPECIAL}, this.state.getValue().userData.data.id).toPromise();
+      this.store.dispatch(new AddDataRegister({account_type: EnumUserType.SPECIAL}));
+      console.log(userDataType);
+
       this.loading = false;
-      this.navigateTo(EnumRoutesApplication.REGISTER_WHO_ARE_YOU);
+      this.navigateTo(EnumRoutesApplication.RULES);
     }
 
   }

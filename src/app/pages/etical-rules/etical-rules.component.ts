@@ -16,6 +16,7 @@ export class EticalRulesComponent implements OnInit {
   firstRule: ModelCardImgTitleText;
   secondRule: ModelCardImgTitleText;
   thirdRule: ModelCardImgTitleText;
+  forthRule: ModelCardImgTitleText;
 
   enumRoutes = EnumRoutesApplication
   constructor(
@@ -33,21 +34,27 @@ export class EticalRulesComponent implements OnInit {
     const rulesTranslated = this.dataTexts.eticalRules.rules;
     this.firstRule = new ModelCardImgTitleText(
       idsRules.FIRST_RULE,
-      icon.CHECK_MAGENTA,
+      icon.CHECK,
       rulesTranslated.firstRule.title,
       rulesTranslated.firstRule.text
     );
     this.secondRule = new ModelCardImgTitleText(
       idsRules.SECOND_RULE,
-      icon.CHECK_MAGENTA,
+      icon.CHECK,
       rulesTranslated.secondRule.title,
       rulesTranslated.secondRule.text
     );
     this.thirdRule = new ModelCardImgTitleText(
       idsRules.THIRD_RULE,
-      icon.CHECK_MAGENTA,
+      icon.CHECK,
       rulesTranslated.thirdRule.title,
       rulesTranslated.thirdRule.text
+    );
+    this.forthRule = new ModelCardImgTitleText(
+      idsRules.FORTH_RULE,
+      icon.CHECK,
+      rulesTranslated.forthRule.title,
+      rulesTranslated.forthRule.text
     );
   }
   navigateTo(route: string): void {

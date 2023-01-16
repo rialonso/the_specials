@@ -15,7 +15,7 @@ export class IconModule {
       .addSvgIcon('logo_google', this.setPath(`${this.path}/logo-google.svg`))
       .addSvgIcon('icon_qr_code', this.setPath(`${this.path}/qr_code.svg`))
       .addSvgIcon('logo_raposo_shoping', this.setPath(`${this.path}/logo-raposo-shopping.svg`))
-      .addSvgIcon('check_magenta', this.setPath(`${this.path}/check.svg`))
+      .addSvgIcon('check', this.setPath(`${this.path}/check.svg`))
       .addSvgIcon('camera_add_picture', this.setPath(`${this.path}/camera-add-picture.svg`))
       .addSvgIcon('heart', this.setPath(`${this.path}/heart.svg`))
       .addSvgIcon('logo', this.setPath(`${this.path}/logo.svg`))

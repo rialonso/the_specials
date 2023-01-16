@@ -1,11 +1,16 @@
 <div id="container-etical-rules" class="height-100vh">
 <div class="content-etical-rules dp-flex">
-  <header class="logo-devote dp-flex-all-center">
-    <img src="/assets/images/logo-blue.png" alt="Logo Devotee" data-alt="altlogo" id="altfootlogo">
+  <header class="logo-the-specials dp-flex-all-center">
+    <!-- <img src="/assets/images/logo.png/" alt="The Special" data-alt="altlogo" id="altfootlogo"> -->
     <div class="container-text-logo dp-flex-column-all-center">
       <h2 class="color-blue-dark">{{dataTexts.eticalRules.welcome}}</h2>
-      <h1 class="color-blue-dark font-booster-next-bold">Devotee</h1>
     </div>
+
+    <div class="container-logo">
+      <mat-icon class="cursor-pointer" svgIcon="logo"></mat-icon>
+      <p class="font-booster-next-bold color-blue-medium-logo title-logo cursor-pointer" >The Specials</p>
+    </div>
+
   </header>
   <main id="etical-rules">
     <div class="content-rules dp-flex-column-all-center">
@@ -14,10 +19,12 @@
       <app-card-img-title-text [data]="firstRule"></app-card-img-title-text>
       <app-card-img-title-text [data]="secondRule"></app-card-img-title-text>
       <app-card-img-title-text [data]="thirdRule"></app-card-img-title-text>
+      <app-card-img-title-text [data]="forthRule"></app-card-img-title-text>
+
     </div>
 
     <div class="container-buttons dp-flex">
-      <button class="button stroke-primary flex-1" (click)="navigateTo(enumRoutes.PRE_REGISTER)">
+      <button class="button secondary flex-1" (click)="navigateTo(enumRoutes.PRE_REGISTER)">
         {{dataTexts.buttons.btnBack}}
       </button>
       <button class="button primary flex-1" (click)="navigateTo(enumRoutes.REGISTER_USER_DATA)">
@@ -27,5 +34,5 @@
     </div>
   </main>
 </div>
-<app-footer [backgroudColor]="'bg-gradient-magenta-blue'" [logo]="'/assets/images/logo-blue.png'"></app-footer>
+<app-footer [backgroudColor]="'bg-footer-secondary'"></app-footer>
 </div>

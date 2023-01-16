@@ -155,7 +155,10 @@ footer{
 }
 .bg-gradient-magenta-blue, .bg-footer-secondary  {
   .container-footer {
-    p, h2 {
+    h2 {
+      color: $blue-brand;
+    }
+    p {
       color: $blue-dark;
     }
     #copyright {
