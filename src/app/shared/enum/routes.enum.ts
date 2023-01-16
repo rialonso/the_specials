@@ -4,6 +4,8 @@ export enum EnumRoutesApplication {
   PRE_REGISTER = '/pre-register',
   REGISTER_WHO_ARE_YOU = '/register/who-are-you',
   REGISTER_USER_DATA = '/register/user-data',
+  REGISTER_PICTURES = '/register/pictures',
+
   FILTERS = '/filters',
   MATCHS = '/matchs',
   RULES = '/rules',

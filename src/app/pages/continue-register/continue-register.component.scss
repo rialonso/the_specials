@@ -13,7 +13,7 @@ router-outlet {
   padding: 20px;
   box-sizing: border-box;
   header {
-    @include dp-flex-alignment(column,initial, initial);
+    @include dp-flex-alignment(column,center, center);
     gap: 15px;
     .logo {
       width: 30px;

@@ -8,6 +8,7 @@ import { RegisterDataComponent } from './components/register-data/register-data.
 import { ChangeUserTypeComponent } from './components/change-user-type/change-user-type.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { RegisterPicturesComponent } from './components/register-pictures/register-pictures.component';
+import { RegisterStepHeaderInfoComponent } from './components/register-step-header-info/register-step-header-info.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RegisterPicturesComponent } from './components/register-pictures/regist
     RegisterDataComponent,
     ChangeUserTypeComponent,
     RegisterPicturesComponent,
+    RegisterStepHeaderInfoComponent,
   ],
   imports: [
     CommonModule,
