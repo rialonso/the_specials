@@ -16,6 +16,13 @@ const routes: Routes = [
         component: ChangeUserTypeComponent,
         canActivate: [WhoAreYouRegistredCorrectService]
       },
+      ,
+      {
+        path: 'pictures',
+        component: RegisterDataComponent,
+        canActivate: [UserRegistredCorrectService]
+
+      },
       {
         path: 'user-data',
         component: RegisterDataComponent,
