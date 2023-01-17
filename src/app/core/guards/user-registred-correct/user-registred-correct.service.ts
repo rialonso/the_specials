@@ -28,12 +28,14 @@ export class UserRegistredCorrectService implements CanActivate {
      const dataRegister: IRegisterUser  = this.state.getValue().registerData;
      
      if (!dataRegister.account_type) {
-      this.routeService.navigateToURL(EnumRoutesApplication.REGISTER_WHO_ARE_YOU)
+      this.routeService.navigateToURL(EnumRoutesApplication.RULES)
       return false;
 
       } else if(
         dataRegister.profile_picture == null || dataRegister.profile_picture.length === 0
       ) {
+        this.routeService.navigateToURL(EnumRoutesApplication.REGISTER_PICTURES)
+
         return true;
       }else if(
         (!dataRegister.address_description

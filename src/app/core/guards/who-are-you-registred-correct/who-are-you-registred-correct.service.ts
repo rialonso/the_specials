@@ -26,8 +26,10 @@ export class WhoAreYouRegistredCorrectService implements CanActivate {
     ): Observable<boolean> | boolean {
      this.verifyStageRegisterDataService.getUserData();
      const dataRegister: IRegisterUser  = this.state.getValue().registerData;
-
+      console.log(dataRegister.account_type);
+      
      if (!dataRegister.account_type) {
+
       return true;
 
     } else if(

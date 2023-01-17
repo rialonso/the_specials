@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/core/services/translate/translate.service';
 
 @Component({
   selector: 'app-register-step-header-info',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterStepHeaderInfoComponent implements OnInit {
 
-  constructor() { }
+  dataTexts;
+  @Input() infos: string;
+  constructor(
+    private translateService: TranslateService,
+  ) { 
+    this.dataTexts = this.translateService?.textTranslate;
+  }
 
   ngOnInit() {
   }
+
 
 }

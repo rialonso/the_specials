@@ -64,7 +64,9 @@
       "btnBack": "Voltar"
     },
     "registerPg": {
-      "title": "Cadastrar"
+      "title": "Cadastrar",
+      "text": "<div> Agora me conta um pouco <span class='color-blue-brand'>sobre você?</span>?</div>"
+
     },
     "buttons": {
       "btnContinue": "Continuar",
@@ -78,7 +80,9 @@
       "btnEntry" : "Entrar",
       "btnAccess": "Acesse",
       "btnRegisterSe": "Cadastre-se",
-      "btnShop": "Loja"
+      "btnShop": "Loja",
+      "btnNotNow": "Agora não"
+
     },
     "inputs": {
       "genericErrors": {
@@ -146,7 +150,7 @@
         }
       },
       "sexualOrientation": {
-        "label": "Orientação sexual",
+        "label": "Sexualidade",
         "placeHolder": "Selecione sua orientação sexual",
         "errors" : {
           "none": "none"
@@ -300,6 +304,10 @@
         }
       }
     },
+    "registerPictures": {
+      "register": "Cadastro",
+      "text": "<div> Chegou a hora de nos conhecermos melhor. </div> <div>Para começar, que tal nos mostrar suas <span class='color-blue-brand'>melhores fotos </span>?</div>"
+    },
     "errors": {
       "credentials": "Credenciais incorretas",
       "existingEmail": "Email já está em uso."
@@ -324,8 +332,9 @@
     "iamEspecialAndDevotee": {
       "headerYourProfile":"Seu Perfil",
       "titleProfilePicture":"Foto de perfil",
-      "titleMorePictures":"Fotos",
-      "titleAboutYourself":"Sobre você",
+      "titleMorePictures":"Galeria",
+      "textInfo": "A foto que estiver na primeira posição, será sua foto de perfil",
+      "titleAboutYourself":"Informações pessoais",
       "titleAboutYourDisability":"Sobre sua deficiência",
       "btnNext":"Proximo"
     },
@@ -646,7 +655,8 @@
       "btnBack": "Back"
     },
     "registerPg": {
-      "title": "Register"
+      "title": "Register",
+      "text": "<div>Now tell me a little  <span class='color-blue-brand'>about yourself?</span>?</div>"
     },
     "buttons": {
       "btnContinue": "Continue",
@@ -660,7 +670,9 @@
       "btnEntry" : "Login",
       "btnAccess": "Sign in",
       "btnRegisterSe": "Register",
-      "btnShop": "Shop"
+      "btnShop": "Shop",
+      "btnNotNow": "Not now"
+
 
     },
     "inputs": {
@@ -728,8 +740,8 @@
         }
       },
       "sexualOrientation": {
-        "label": "Sexual orientation",
-        "placeHolder": "Enter your sexual orientation",
+        "label": "Sexuality",
+        "placeHolder": "Enter your Sexuality",
         "errors" : {
           "none": "none"
         }
@@ -882,6 +894,10 @@
         }
       }
     },
+    "registerPictures": {
+      "register": "Register",
+      "text": "<div> The time has come for us to get to know each other better. </div> <div>To start, would you like show your <span class='color-blue-brand'>better picture </span>?</div>"
+    },
     "errors": {
       "credentials": "Incorrect credentials",
       "existingEmail": "Email already used."
@@ -889,8 +905,9 @@
     "iamEspecialAndDevotee":{
       "headerYourProfile":"Your profile",
       "titleProfilePicture":"Profile picture",
-      "titleMorePictures":"Pictures",
-      "titleAboutYourself":"About yourself",
+      "titleMorePictures":"Gallery",
+      "textInfo": "The photo that is in the first position will be your profile picture",
+      "titleAboutYourself":"Personal information",
       "titleAboutYourDisability":"About or disability",
       "btnNext":"Proximo"
     },

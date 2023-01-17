@@ -27,7 +27,10 @@ export class IconModule {
       .addSvgIcon('logo_facebook', this.setPath(`${this.path}/logo-facebook.svg`))
       .addSvgIcon('logo_instagram', this.setPath(`${this.path}/logo-instagram.svg`))
       .addSvgIcon('logo_youtube', this.setPath(`${this.path}/logo-youtube.svg`))
+      .addSvgIcon('gallery', this.setPath(`${this.path}/gallery.svg`))
+      .addSvgIcon('assignment_ind', this.setPath(`${this.path}/assignment_ind.svg`))
 
+      
       ;
 
     }

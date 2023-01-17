@@ -131,7 +131,7 @@ p, a {
         padding: 10px 0;
       }
       mat-card-title {
-        color: $blue-dark;
+        color: $grey-medium;
         font-size: 24px;
         margin: 0;
       }
@@ -142,7 +142,7 @@ p, a {
         padding: 20px;
       }
       mat-card-title {
-        color: $blue-dark;
+        color: $grey-medium;
       }
     }
   }
@@ -290,6 +290,20 @@ body { margin: 0; font-family: "Booster-next-regular", "Helvetica Neue", sans-se
   }
 
 }
+mat-card {
+  &.border-radius-24 {
+    border-radius: 24px;
+  }
+}
+
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
   background-color: #fff; 
+}
+.contanier-register-title {
+  @include dp-flex-alignment(row, flex-start, initial);
+  margin-bottom: 20px;
+  gap: 10px;
+  mat-card-title {
+      margin-bottom: 0;
+  }
 }

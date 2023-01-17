@@ -1,5 +1,111 @@
 
-<app-register-step-header-info></app-register-step-header-info>
+<app-register-step-header-info [infos]="headerInfos"></app-register-step-header-info>
 <div class="container-register-pictures">
-  picture_as_pdf
+  <form action="">
+    <mat-card class="container-others-pictures container-register-default cotainer-data-register border-radius-24">
+      <div class="contanier-register-title">
+        <mat-icon class="color-purple-brand" svgIcon="gallery"></mat-icon>
+        <div>
+          <mat-card-title class="color-grey-medium">{{dataTexts.iamEspecialAndDevotee.titleMorePictures}}</mat-card-title>
+          <p class="color-grey-medium pa">{{dataTexts.iamEspecialAndDevotee.textInfo}}</p>
+        </div>
+
+      </div>
+      <div class="more-pictures">
+        
+        <div class="more-photos flex-1 cursor-pointer">
+          <label for="more-photos-1" class="cursor-pointer">
+            <mat-icon class="profile-img"*ngIf="!imagesURL?.firstImage">
+              add_circle
+            </mat-icon>
+            <div class="profile-img  width-100-per heigth-100-per" *ngIf="imagesURL?.firstImage">
+              <img class="" src={{imagesURL?.firstImage}} alt="">
+            </div>
+          </label>
+
+          <input
+            type="file"
+            id="more-photos-1"
+            name="more-photos-1"
+            accept="image/png, image/jpeg"
+            class="input-file input-photo-principal"
+            (change)="selectedImage($event.target.files, imagesTypes.FIRST_IMAGE)">
+        </div>
+        <div class="more-photos flex-1 cursor-pointer">
+          <label for="more-photos-2" class="cursor-pointer">
+            <mat-icon class="profile-img" *ngIf="!imagesURL?.secondImage">
+              add_circle
+            </mat-icon>
+            <div class="profile-img width-100-per heigth-100-per" *ngIf="imagesURL?.secondImage">
+              <img class="" src={{imagesURL?.secondImage}} alt="">
+            </div>
+          </label>
+
+          <input
+            type="file"
+            id="more-photos-2"
+            name="more-photos-2"
+            accept="image/png, image/jpeg"
+            class="input-file input-photo-principal"
+            (change)="selectedImage($event.target.files, imagesTypes.SECOND_IMAGE)">
+        </div>
+        <div class="more-photos flex-1 cursor-pointer" >
+          <label for="more-photos-3" class="cursor-pointer">
+            <mat-icon class="profile-img" *ngIf="!imagesURL?.thirdImage">
+              add_circle
+            </mat-icon>
+            <div class="profile-img width-100-per heigth-100-per" *ngIf="imagesURL?.thirdImage">
+              <img class="" src={{imagesURL?.thirdImage}} alt="">
+            </div>
+          </label>
+          <input
+            type="file"
+            id="more-photos-3"
+            name="more-photos-3"
+            accept="image/png, image/jpeg"
+            class="input-file input-photo-principal"
+            (change)="selectedImage($event.target.files, imagesTypes.THIRD_IMAGE)">
+        </div>
+        <div class="more-photos flex-1 cursor-pointer" >
+          <label for="more-photos-4" class="cursor-pointer">
+            <mat-icon class="profile-img " *ngIf="!imagesURL?.fortyImage">
+              add_circle
+            </mat-icon>
+            <div class="profile-img width-100-per heigth-100-per" *ngIf="imagesURL?.fortyImage">
+              <img class="" src={{imagesURL?.fortyImage}} alt="">
+            </div>
+          </label>
+          <input
+            type="file"
+            id="more-photos-4"
+            name="more-photos-4"
+            accept="image/png, image/jpeg"
+            class="input-file input-photo-principal"
+            (change)="selectedImage($event.target.files, imagesTypes.FORTY_IMAGE)">
+        </div>
+      </div>
+    </mat-card>
+  </form>
+  <section class="contianer-btns out-container">
+    <button
+      class="button secondary"
+      (click)="navigateTo(enumRoutesApplication.RULES)" >
+      {{ dataTexts.buttons.btnBack }}
+    </button>
+    <button
+      *ngIf="imagesList.length <= 0"
+      class="button primary"
+      (click)="continueRegister()">
+      
+      {{ dataTexts.buttons.btnNotNow }}
+    </button>
+    <button
+    *ngIf="imagesList.length > 0"
+    class="button primary"
+    (click)="continueRegister()">
+    
+    {{ dataTexts.buttons.btnContinue }}
+  </button>
+  </section>
 </div>
+<app-principal-loading *ngIf="loading"></app-principal-loading>

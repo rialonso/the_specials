@@ -137,8 +137,6 @@ export class RegisterComponent implements OnInit {
       this.store.dispatch(new AddAllDataUser(registerData));
       const userDataType = await this.updateDataService.post({account_type: EnumUserType.SPECIAL}, this.state.getValue().userData.data.id).toPromise();
       this.store.dispatch(new AddDataRegister({account_type: EnumUserType.SPECIAL}));
-      console.log(userDataType);
-
       this.loading = false;
       this.navigateTo(EnumRoutesApplication.RULES);
     }

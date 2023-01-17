@@ -1,13 +1,8 @@
 <div class="container-step-header">
   <div class="register-step-header-title color-grey-medium">
-    Cadastro
+    {{dataTexts.registerPictures.register}}
   </div>
-  <div class="color-grey-medium register-header-info f-size-24">
-    <div >
-      Chegou a hora de nos conhecermos melhor.
-    </div>
-    <div>
-       Para começar, que tal nos mostrar suas <span class="color-blue-brand">melhores fotos </span>?
-    </div>
+  <div class="color-grey-medium register-header-info f-size-24" [innerHTML]="infos">
+   
   </div>
 </div>

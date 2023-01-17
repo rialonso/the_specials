@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuardService } from './core/guards/auth-guard/auth.guard.service';
 import { LoggedService } from './core/guards/logged/logged.guard.service';
+import { WhoAreYouRegistredCorrectService } from './core/guards/who-are-you-registred-correct/who-are-you-registred-correct.service';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
   {
     path: 'rules',
     loadChildren: () => import('src/app/pages/etical-rules/etical-rules.module').then(m => m.EticalRulesModule),
+    canActivate: [WhoAreYouRegistredCorrectService]
   },
   {
     path: 'register',
