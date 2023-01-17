@@ -1,6 +1,6 @@
 @import '_custom';
 :host {
-  background: transparent linear-gradient(180deg, $sand-soft 0%, $sand-medium 100%) 0% 0% no-repeat padding-box;;
+  // background: transparent linear-gradient(180deg, $sand-soft 0%, $sand-medium 100%) 0% 0% no-repeat padding-box;;
   height: 100%;
 }
 .ads {
@@ -77,12 +77,13 @@
       border-radius: 10px;
       .action-active {
         position: absolute;
-        bottom: 10px;
+        bottom: 20px;
         z-index: 6;
         gap: 10px;
         width: 100%;
-        padding: 0 10px;
+        padding: 0 22px;
         box-sizing: border-box;
+
         @include dp-flex-alignment();
         max-width: 400px;
 
@@ -102,11 +103,13 @@
       max-width: 400px;
 
       .container-gradient-see-infos {
-        background-image: linear-gradient($black-01, $black-80);
+        background: #56504c3d 0% 0% no-repeat padding-box;;
         @include dp-flex-alignment(column, initial, flex-end);
         gap: 10px;
         padding: 20px 10px;
         border-radius: 10px;
+        margin: 10px;
+        backdrop-filter: blur(10px);
         .container-user-info {
           .tip-user-type {
             @include dp-flex-alignment();
@@ -118,6 +121,7 @@
         }
         .distance-match {
           @include dp-flex-alignment(row, center, flex-start);
+          gap: 5px;
           mat-icon {
             font-size: 20px;
             width: 20px;

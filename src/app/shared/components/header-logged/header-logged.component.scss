@@ -1,7 +1,7 @@
 @import '_custom';
 #container-header-logged {
-  background: $sand-soft 0% 0% no-repeat padding-box;
-
+  // background: $sand-soft 0% 0% no-repeat padding-box;
+  border-bottom: 1px solid #D0E0FD;
   .content-header-logged {
     @include dp-flex-alignment(row, center, space-between);
     padding: 15px;
@@ -9,9 +9,11 @@
   }
   .container-logo {
     @include dp-flex-alignment();
+    width: 35px;
+
     .logo {
-      width: 30px;
-      height: auto;
+      width: 35px;
+      height: 35px;
     }
     p {
       color: $white;
@@ -50,7 +52,7 @@
     }
     .icon-route-is-active{
       .icon-menu-logged{
-        color: $magenta-soft;
+        color: $blue-brand;
       }
       p {
         color: $blue-dark;

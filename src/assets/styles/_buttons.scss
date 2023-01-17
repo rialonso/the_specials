@@ -85,7 +85,7 @@
   &.like-dislike {
     background-color: transparent;
     color: $white;
-    border: 1px solid $white;
+    border: 0;
     @include dp-flex-alignment();
 
     mat-icon {
@@ -98,18 +98,19 @@
       }
     }
     &.like {
-      background-color: $pink-soft;
+      background-color: $green-soft;
       mat-icon {
+        color: $red-default;
         svg {
           path {
-            fill: $magenta-soft;
+            fill: $red-default;
             opacity: 1;
           }
         }
       }
     }
     &.dislike {
-      background: #FFFFFF4D 0% 0% no-repeat padding-box;;
+      background: $red-soft 0% 0% no-repeat padding-box;;
     }
     &.liked {
       border: 1px solid $green-info;
