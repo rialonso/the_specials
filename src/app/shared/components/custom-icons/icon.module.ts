@@ -29,6 +29,7 @@ export class IconModule {
       .addSvgIcon('logo_youtube', this.setPath(`${this.path}/logo-youtube.svg`))
       .addSvgIcon('gallery', this.setPath(`${this.path}/gallery.svg`))
       .addSvgIcon('assignment_ind', this.setPath(`${this.path}/assignment_ind.svg`))
+      .addSvgIcon('local_hospital', this.setPath(`${this.path}/local_hospital.svg`))
 
       
       ;

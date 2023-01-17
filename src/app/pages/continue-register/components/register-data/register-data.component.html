@@ -8,8 +8,8 @@
           <div class="contanier-register-title">
             <mat-icon class="color-purple-brand" svgIcon="assignment_ind"></mat-icon>
             <div>
-              <mat-card-title class="color-grey-medium">{{dataTexts.iamEspecialAndDevotee.titleMorePictures}}</mat-card-title>
-              <p class="color-grey-medium pa">{{dataTexts.iamEspecialAndDevotee.titleAboutYourself}}</p>
+              <mat-card-title class="color-grey-medium">{{dataTexts.iamEspecialAndDevotee.titleAboutYourself.title}}</mat-card-title>
+              <p class="color-grey-medium pa">{{dataTexts.iamEspecialAndDevotee.titleAboutYourself.textInfo}}</p>
             </div>
     
           </div>
@@ -154,7 +154,14 @@
           </div>
         </mat-card>
         <mat-card *ngIf="specialAccount" class="container-data-disability container-register-default cotainer-data-register">
-          <mat-card-title>{{dataTexts.iamEspecialAndDevotee.titleAboutYourDisability}}</mat-card-title>
+          <div class="contanier-register-title">
+            <mat-icon class="color-purple-brand" svgIcon="local_hospital"></mat-icon>
+            <div>
+              <mat-card-title>{{dataTexts.iamEspecialAndDevotee.titleAboutYourDisability.title}}</mat-card-title>
+              <p class="color-grey-medium pa">{{dataTexts.iamEspecialAndDevotee.titleAboutYourDisability.textInfo}}</p>
+            </div>
+    
+          </div>
           <div class="container-default-inputs-orientation content-data-person">
             <mat-form-field appearance="fill">
               <mat-label>{{ dataTexts.inputs.selectICD.label }}</mat-label>

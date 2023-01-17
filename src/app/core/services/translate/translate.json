@@ -178,7 +178,7 @@
         }
       },
       "selectICD": {
-        "label": "Classificação Internacional de Doenças (CID)",
+        "label": "CID`s",
         "placeHolder": "Selecion as CIDs",
         "errors" : {
           "none": "none"
@@ -192,14 +192,14 @@
         }
       },
       "selectMedications": {
-        "label": "Medicações que utilizo",
+        "label": "Medicamentos",
         "placeHolder": "Medicações ou drogas",
         "errors" : {
           "none": "none"
         }
       },
       "selectHospitals": {
-        "label": "Hospitais que frequento",
+        "label": "Hospitais",
         "placeHolder": "Hospitals que frequento",
         "errors" : {
           "none": "none"
@@ -332,10 +332,20 @@
     "iamEspecialAndDevotee": {
       "headerYourProfile":"Seu Perfil",
       "titleProfilePicture":"Foto de perfil",
-      "titleMorePictures":"Galeria",
-      "textInfo": "A foto que estiver na primeira posição, será sua foto de perfil",
-      "titleAboutYourself":"Informações pessoais",
-      "titleAboutYourDisability":"Sobre sua deficiência",
+
+      "titleMorePictures": {
+        "title": "Galeria",
+        "textInfo": "A foto que estiver na primeira posição, será sua foto de perfil"
+      },
+      "titleAboutYourself": {
+        "title": "Informações pessoais",
+        "textInfo": "Informações básicas para te conhecer um pouco melhor"
+      },
+      "titleAboutYourDisability": {
+        "title": "Informações médicas",
+        "textInfo": "Informações sobre sua(s) deficiência(s)"
+      },
+
       "btnNext":"Proximo"
     },
     "genders": [
@@ -768,7 +778,7 @@
         }
       },
       "selectICD": {
-        "label": "Internetional classification of diseases (ICD)",
+        "label": "ICD`s",
         "placeHolder": "Select the ICDs",
         "errors" : {
           "none": "none"
@@ -782,14 +792,14 @@
         }
       },
       "selectMedications": {
-        "label": "Medications i take",
+        "label": "Medications",
         "placeHolder": "Medications or drugs",
         "errors" : {
           "none": "none"
         }
       },
       "selectHospitals": {
-        "label": "Hospitals i go",
+        "label": "Hospitals",
         "placeHolder": "Medical center i go",
         "errors" : {
           "none": "none"
@@ -905,10 +915,18 @@
     "iamEspecialAndDevotee":{
       "headerYourProfile":"Your profile",
       "titleProfilePicture":"Profile picture",
-      "titleMorePictures":"Gallery",
-      "textInfo": "The photo that is in the first position will be your profile picture",
-      "titleAboutYourself":"Personal information",
-      "titleAboutYourDisability":"About or disability",
+      "titleMorePictures": {
+        "title": "Gallery",
+        "textInfo": "The photo that is in the first position will be your profile picture"
+      },
+      "titleAboutYourself": {
+        "title": "Personal information",
+        "textInfo": "Basic information to get to know you a little better"
+      },
+      "titleAboutYourDisability": {
+        "title": "medical information",
+        "textInfo": "Information about your disability(ies)"
+      },
       "btnNext":"Proximo"
     },
     "changeUserType":{
