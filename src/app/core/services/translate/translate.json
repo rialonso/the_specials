@@ -566,6 +566,7 @@
       },
       "age": {
         "title": "Idade",
+        "textInfo": "Age range you want",
         "minAge": "Idade mínima",
         "maxAge": "Idade máxima",
         "years": "anos"
@@ -1179,6 +1180,7 @@
       },
       "age": {
         "title": "Age",
+        "textInfo": "Intervalo de idade que você deseja",
         "minAge": "Min age",
         "maxAge": "Max age",
         "years": "years"

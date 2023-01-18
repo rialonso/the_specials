@@ -78,7 +78,13 @@
         </div>
       </mat-card>
       <mat-card  class="content-deafult-preference-sections">
-        <mat-card-title>{{dataTexts.preferences.age.title}}</mat-card-title>
+        <div class="contanier-register-title">
+          <mat-icon class="color-purple-brand" svgIcon="tune"></mat-icon>
+          <div>
+            <mat-card-title>{{dataTexts.preferences.age.title}}</mat-card-title>
+            <p class="color-grey-medium pa">{{dataTexts.preferences.age.textInfo}}</p>
+          </div>
+        </div>
         <div class="container-default-inputs-orientation">
           <section class="content-age width-100-per">
             <mat-slider
