@@ -444,7 +444,7 @@
       },
       {
         "label": "Especial",
-        "value": "Special"
+        "value": "special"
       },
       {
         "label": "Todos",
@@ -475,6 +475,21 @@
       {
         "label": "Deixar acontecer",
         "value": "sex_happen"
+      }
+      
+    ],
+    "targetGenders": [
+      {
+        "label": "Homem",
+        "value": "male"
+      },
+      {
+        "label": "Mulher",
+        "value": "female"
+      },
+      {
+        "label": "Todos",
+        "value": "all"
       }
     ],
     "activateLocation": {
@@ -536,14 +551,18 @@
       "prejudice":"Exemplo de superção"
     },
     "preferences": {
-      "title": "Editar preferências",
+      "title": "Preferências",
+      "textInfo": "Defina aqui as preferências de busca",
       "locale": {
         "title":  "Localização",
-        "distance": "Raio de busca:",
+        "textInfo": "Raio de busca",
+        "distance": "Buscando usuários até",
         "sufixDistance": "km"
       },
       "userPreference": {
-        "title":  "Preferências de usuário"
+        "title":  "Preferências de usuário",
+        "textInfo": "Preferências de gênero e tipo de relacionamento"
+
       },
       "age": {
         "title": "Idade",
@@ -1042,7 +1061,7 @@
       },
       {
         "label": "Special",
-        "value": "Special"
+        "value": "special"
       },
       {
         "label": "All",
@@ -1145,13 +1164,18 @@
     },
     "preferences": {
       "title": "Edit preferences",
+      "textInfo": "Gender preferences and relationship type",
+
       "locale": {
         "title":  "Localization",
-        "distance": "Search radius:",
+        "textInfo": "Search radius:",
+        "distance": "using users until",
         "sufixDistance": "mile"
       },
       "userPreference": {
-        "title":  "User prefenreces"
+        "title":  "User preferences",
+        "textInfo": "Gender preferences and relationship type"
+
       },
       "age": {
         "title": "Age",

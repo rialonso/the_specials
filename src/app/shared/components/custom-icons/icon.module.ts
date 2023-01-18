@@ -32,6 +32,7 @@ export class IconModule {
       .addSvgIcon('local_hospital', this.setPath(`${this.path}/local_hospital.svg`))
       .addSvgIcon('heart_broken', this.setPath(`${this.path}/heart_broken.svg`))
       .addSvgIcon('mode_of_travel', this.setPath(`${this.path}/mode_of_travel.svg`))
+      .addSvgIcon('tune', this.setPath(`${this.path}/tune.svg`))
 
       
       ;

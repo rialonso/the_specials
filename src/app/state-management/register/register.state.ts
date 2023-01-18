@@ -37,7 +37,7 @@ export const INITIAL_STATE_REGISTER_USER: IRegisterUser = {
 	sexual_orientation: null,
 	target_gender: null,
 	relationship_type: 'all',
-	target_account_type: 'all',
+	target_account_type: 'special',
 	profile_picture: null,
 	automatic_location: null,
 	lat: null,
