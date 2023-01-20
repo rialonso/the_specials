@@ -83,9 +83,9 @@ body{
         width: 15px;
         height: 15px;
         border-radius: 100%;
-        background: $magenta-soft;
+        background: $purple-brand;
         z-index: 1;
-        border: 1px solid $blue-dark;
+        border: 1px solid $blue-brand;
       }
     }
     .container-person-image{
@@ -108,7 +108,7 @@ body{
         border-radius: 100%;
         min-width: 80px;
         min-height: 80px;
-        border: 1.5px solid $magenta-soft;
+        border: 1.5px solid $purple-brand;
       }
       mat-icon {
         font-size: 15px;

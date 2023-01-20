@@ -55,14 +55,14 @@
     </section>
 
     <section class="container-info color-blue-dark cursor-pointer" (click)="openProfile()">
-      <p class="person-name font-booster-next-bold">
+      <p class="person-name font-booster-next-bold color-purple-brand">
         {{userData.name}}
-        <span
-          *ngIf="userData.birthdate">,
-          {{transformAge(userData.birthdate)}}
-        </span>
       </p>
-      <p class="last-message">{{userData?.account_type}}</p>
+      <p 
+        class="last-message"
+        *ngIf="userData.birthdate">
+        {{transformAge(userData.birthdate)}} {{dataTexts.preferences.age.years}}
+      </p>
     </section>
 
   </div>
@@ -104,7 +104,7 @@
     <form [formGroup]="formGroup" class="input-sent-msg" *ngIf="dataChat">
       <input formControlName="content" type="text" (keyup.enter)="sendMessage()">
       <div class="btn-sent cursor-pointer" (click)="sendMessage()">
-        <mat-icon class="color-magenta-soft">send</mat-icon>
+        <mat-icon class="color-blue-brand">send</mat-icon>
       </div>
     </form>
   </div>

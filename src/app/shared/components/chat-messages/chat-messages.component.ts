@@ -9,6 +9,7 @@ import { TransformAgeService } from '../../functions/transform-age/transform-age
 import { environment } from 'src/environments/environment';
 import { DialogsService } from '../../functions/dialogs/dialogs.service';
 import { UserProfileService } from 'src/app/core/services/user-profile/user-profile.service';
+import { TranslateService } from 'src/app/core/services/translate/translate.service';
 
 @Component({
   selector: 'app-chat-messages',
@@ -35,13 +36,20 @@ export class ChatMessagesComponent implements OnInit {
   formGroup: FormGroup;
 
   destroy$ = new ReplaySubject();
+
+  dataTexts;
+
   constructor(
     private transformAgeService: TransformAgeService,
     private sendMessagesService: SendMessageService,
     private formBuilder: FormBuilder,
     private dialogsService: DialogsService,
     private userProfileService: UserProfileService,
-  ) { }
+    private translateService: TranslateService,
+  ) { 
+    this.dataTexts = this.translateService?.textTranslate;
+
+  }
 
   ngOnInit(): void {
     this.userId = parseInt(localStorage.getItem('userId'));

@@ -34,7 +34,7 @@
     min-height: 50px;
     border-radius: 100%;
     object-fit: cover;
-    border: 1px solid $magenta-soft;
+    border: 1px solid $purple-brand;
 
   }
   mat-icon {
@@ -139,12 +139,12 @@
   }
   .msg-recived {
     color: $black;
-    background-color: $magenta-soft;
+    background-color: $purple-brand;
     border-radius: 10px 10px 10px 0;
   }
   .msg-sent {
     color: $white;
-    background-color: $blue-dark;
+    background-color: $blue-brand;
     border-radius: 10px 10px 0 10px;
   }
   .box-msg-image {
