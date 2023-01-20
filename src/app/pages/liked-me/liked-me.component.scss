@@ -26,9 +26,12 @@
       padding: 10px;
       box-sizing: border-box;
       border-radius: 20px;
-
       @include dp-flex-alignment(row, flex-end, initial);
-
+      .container-infos-about-likes {
+        background: #56504c3d 0% 0% no-repeat padding-box;
+        padding: 20px;
+        border-radius: 12px
+      }
       .tip-user-type {
 
         @include dp-flex-alignment();
