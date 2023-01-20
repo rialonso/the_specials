@@ -8,12 +8,14 @@ import { LocationService } from 'src/app/core/services/location.service';
 import { PlacesAutoCompleteService } from 'src/app/core/services/places-auto-complete/places-auto-complete.service';
 import { SnackBarService } from 'src/app/core/services/snack-bar/snack-bar.service';
 import { TranslateService } from 'src/app/core/services/translate/translate.service';
+import { UpdateDataService } from 'src/app/core/services/update-data/update-data.service';
 import { ErrorsEnum } from 'src/app/shared/enum/errors/errors.enum';
 import { MLocation } from 'src/app/shared/model/location/location.model';
 import { ModelGetAddressLatLong } from 'src/app/shared/model/response/google/get-address-lat-long/getAddressLatLong.model';
 import { ModelPlacesAutocomplete } from 'src/app/shared/model/response/google/get-places-autocomplete/getPlacesAutocomplete.model';
 import { IAppState } from 'src/app/state-management/app.model';
 import { AddDataRegister } from 'src/app/state-management/register/register.action';
+import { AddAllDataUser } from 'src/app/state-management/user-data/user-data.action';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -46,6 +48,7 @@ export class ActivateLocationComponent implements OnInit {
     private snackBarService: SnackBarService,
     private getAddressLatLongService: GetAddressLatLongService,
     private placesAutoCompleteService: PlacesAutoCompleteService,
+    private updateDataService: UpdateDataService,
   ) {
     matDialogRef.disableClose = true;
    }
@@ -85,7 +88,10 @@ export class ActivateLocationComponent implements OnInit {
           address_description: address.results[0].formatted_address
         }
         this.store.dispatch(new AddDataRegister(dataLocation));
+        const data = this.updateDataService.post(dataLocation, this.state.getValue()?.userData?.data.id).toPromise();        
+
         this.loadingGetLocation = false;
+        
         this.closeModal();
       })
       .catch(reject => {
@@ -104,7 +110,7 @@ export class ActivateLocationComponent implements OnInit {
   returnModal() {
     this.showAddManually = false;
   }
-  async searchPlace(address: any) {
+  async x(address: any) {
     this.store.dispatch(new AddDataRegister({
       lat: address.geometry.location.lat(),
       lng: address.geometry.location.lng(),

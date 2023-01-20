@@ -7,14 +7,14 @@ import { WhoAreYouRegistredCorrectService } from './core/guards/who-are-you-regi
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
-  {
-    path: '',
-    loadChildren: () => import('src/app/pages/landing-page/landing-page.module').then(m => m.LandingPageModule),
-    canActivate: [LoggedService]
-  },
+  // {
+  //   path: '',
+  //   loadChildren: () => import('src/app/pages/landing-page/landing-page.module').then(m => m.LandingPageModule),
+  //   canActivate: [LoggedService]
+  // },
   {
     path: '',
     loadChildren: () => import('src/app/pages/initial-page/initial-page.module').then(m => m.InitialPageModule),

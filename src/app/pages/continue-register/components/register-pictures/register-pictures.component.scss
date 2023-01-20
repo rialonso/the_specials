@@ -1,11 +1,12 @@
 @import '_custom';
-.container-profile-image {
-    div {
-        &.profile-img {
-            @include dp-flex-alignment(row, center, center);
+div {
+  &.profile-img {
+      @include dp-flex-alignment(row, center, center);
 
-        }
-    }
+  }
+}
+.container-profile-image {
+
     .profile-img{
       display: flex;
       margin: 0 auto;

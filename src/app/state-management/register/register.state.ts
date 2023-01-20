@@ -30,7 +30,7 @@ export class IRegisterUser {
 	illicit_drugs: string;  // default null
 }
 export const INITIAL_STATE_REGISTER_USER: IRegisterUser = {
-	account_type: null,
+	account_type: 'special',
 	name: null,
 	birthdate: null,
 	gender: null,

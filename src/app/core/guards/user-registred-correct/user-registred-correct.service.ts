@@ -34,8 +34,6 @@ export class UserRegistredCorrectService implements CanActivate {
       } else if(
         dataRegister.profile_picture == null || dataRegister.profile_picture.length === 0
       ) {
-        this.routeService.navigateToURL(EnumRoutesApplication.REGISTER_PICTURES)
-
         return true;
       }else if(
         (!dataRegister.address_description

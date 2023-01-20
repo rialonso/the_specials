@@ -23,7 +23,6 @@ import { GetMedicalProceduresService } from 'src/app/core/services/get-medical-p
 import { ModelCidsResponse } from 'src/app/shared/model/response/get-cids/get-cids.model';
 import { Observable, ReplaySubject } from 'rxjs';
 import { AddDataRegister } from 'src/app/state-management/register/register.action';
-import { RegisterService } from 'src/app/core/services/register/register.service';
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { GetSelectsSpecialPersonService } from 'src/app/shared/functions/get-selects-special-person/get-selects-special-person.service';
@@ -74,7 +73,6 @@ export class RegisterDataComponent implements OnInit {
     private dialogsService: DialogsService,
     private changeMaskService: ChangeMaskService,
     private stateManagementFuncService: StateManagementFuncService,
-    private registerService: RegisterService,
     private getSelectsSpecialPersonService: GetSelectsSpecialPersonService,
     private updateDataService: UpdateDataService,
 
@@ -167,7 +165,7 @@ export class RegisterDataComponent implements OnInit {
         this.formGroup
         .addControl(
           value,
-          this.formBuilder.control('', Validators.required));
+          this.formBuilder.control(''));
       }
 
     });
@@ -176,7 +174,7 @@ export class RegisterDataComponent implements OnInit {
     const controlsSpecial = [
       ...searchSpecialPerson,
       ...inputsSpecialPerson,
-    ];
+    ];    
     controlsSpecial.forEach((value: string) => {
       this.formGroup.removeControl(value);
     });
@@ -217,7 +215,7 @@ export class RegisterDataComponent implements OnInit {
           disability: this.setDataToSpecialPerson()
         }
       }
-
+      
       await this.updateDataService.post(updateData, this.state.getValue().userData.data.id).toPromise();
       this.loading = false;
       this.navigateTo(EnumRoutesApplication.MATCHS);

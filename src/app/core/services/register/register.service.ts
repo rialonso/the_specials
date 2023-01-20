@@ -32,8 +32,10 @@ class RegisterUserSerializer {
   }
 
   toJson(registerResponse: IUserData.RootObject): IUserData.RootObject {
-    localStorage.setItem('access_token', `${registerResponse.access_token}`);
-    localStorage.setItem('userId', `${registerResponse.data.id}`);
+    if(registerResponse?.access_token && registerResponse?.data?.id) {
+      localStorage.setItem('access_token', `${registerResponse.access_token}`);
+      localStorage.setItem('userId', `${registerResponse?.data?.id}`);
+    }
     return registerResponse;
   }
 }
