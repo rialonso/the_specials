@@ -32,13 +32,13 @@
       border: 1px solid transparent;
 
       &:hover{
-        border: 1px solid $magenta-soft;
+        border: 1px solid $purple-brand;
         background-color: $blue-soft;
         transition: 0.2s;
       }
       mat-icon{
         display: flex;
-        color: $magenta-soft;
+        color: $blue-brand;
         justify-content: center;
         align-items: center;
         margin-bottom: 25px;
