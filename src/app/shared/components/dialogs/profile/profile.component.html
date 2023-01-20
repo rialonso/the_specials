@@ -1,6 +1,6 @@
 <div id="container-profile">
   <div class="container-close">
-    <mat-icon class="mat-18 cursor-pointer" (click)="closeModal()">
+    <mat-icon class="mat-18 cursor-pointer color-blue-brand" (click)="closeModal()">
       close
     </mat-icon>
   </div>
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="container-person-name">
-        <div class="name-age color-blue-dark font-booster-next-bold">
+        <div class="name-age color-purple-brand font-booster-next-bold">
           <span class="first-name">{{ data.name }},</span>
           <span>
             {{ age }}
@@ -40,7 +40,7 @@
             *ngIf="data.id == userId"
             class="container-edit-infos"
             (click)="openEditAboutMe()">
-            <mat-icon class="mat-18 color-white cursor-pointer" >edit</mat-icon>
+            <mat-icon class="mat-18 color-purple-brand cursor-pointer" >edit</mat-icon>
           </div>
         </mat-card>
         <mat-card class="container-type-data-default">
@@ -165,7 +165,7 @@
           *ngIf="data.id == userId">
             <mat-icon
 
-              class="mat-18 color-white cursor-pointer"
+              class="mat-18 color-purple-brand cursor-pointer"
               (click)="openEditProfilePicture()">
               edit
             </mat-icon>
