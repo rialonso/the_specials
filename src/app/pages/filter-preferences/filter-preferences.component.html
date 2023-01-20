@@ -1,14 +1,22 @@
 <div id="container-filters-preferences" class="container-default-cards-register">
   <mat-card class="container-title-register">
-    <div class="container-title-register cursor-pointer" (click)="returnBackRoute()">
-      <mat-icon class="mat-18 color-magenta-soft">arrow_back_ios</mat-icon>
+    <div class="" >
+      <!-- <mat-icon class="mat-18 color-magenta-soft">arrow_back_ios</mat-icon> -->
       <mat-card-title>{{dataTexts.preferences.title}}</mat-card-title>
+      <p class="color-grey-medium">{{dataTexts.preferences.textInfo}}</p>
     </div>
   </mat-card>
   <div class="container-type-data-default">
     <form [formGroup]="formGroup" class="content-preferences">
       <mat-card class="content-deafult-preference-sections">
-        <mat-card-title class="first-title">{{dataTexts.preferences.locale.title}}</mat-card-title>
+        <div class="contanier-register-title">
+          <mat-icon class="color-purple-brand" svgIcon="mode_of_travel"></mat-icon>
+          <div>
+            <mat-card-title>{{dataTexts.preferences.locale.title}}</mat-card-title>
+            <p class="color-grey-medium pa">{{dataTexts.preferences.locale.textInfo}}</p>
+          </div>
+  
+        </div>
         <mat-slider
         class="slider"
         tickInterval="0"
@@ -16,12 +24,18 @@
         max="5000"
         formControlName="max_distance"
         #searchRadius>  </mat-slider>
-        <p class="color-blue-dark text-center">{{dataTexts.preferences.locale.distance}} <span class="font-booster-next-bold">{{searchRadius.value}} {{dataTexts.preferences.locale.sufixDistance}}</span> </p>
+        <p class="color-grey-medium text-center">{{dataTexts.preferences.locale.distance}} <span class="font-booster-next-bold color-blue-brand">{{searchRadius.value}} {{dataTexts.preferences.locale.sufixDistance}}</span> </p>
       </mat-card>
       <mat-card class="content-deafult-preference-sections">
-        <mat-card-title>{{dataTexts.preferences.userPreference.title}}</mat-card-title>
+        <div class="contanier-register-title">
+          <mat-icon class="color-purple-brand" svgIcon="tune"></mat-icon>
+          <div>
+            <mat-card-title>{{dataTexts.preferences.userPreference.title}}</mat-card-title>
+            <p class="color-grey-medium pa">{{dataTexts.preferences.userPreference.textInfo}}</p>
+          </div>
+        </div>
         <div class="container-default-inputs-orientation">
-          <mat-form-field appearance="fill">
+          <!-- <mat-form-field appearance="fill">
             <mat-label>{{ dataTexts.inputs.filterUserType.label }}</mat-label>
             <mat-select
             formControlName="target_account_type">
@@ -33,7 +47,7 @@
                 {{gender.label}}
               </mat-option>
             </mat-select>
-          </mat-form-field>
+          </mat-form-field> -->
 
           <mat-form-field appearance="fill">
             <mat-label>{{ dataTexts.inputs.filterToGender.label }}</mat-label>
@@ -48,13 +62,10 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-        </div>
-
-        <div class="container-default-inputs-orientation">
           <mat-form-field appearance="fill">
             <mat-label>{{ dataTexts.inputs.filterToInterestType.label }}</mat-label>
             <mat-select
-            formControlName="target_account_type">
+            formControlName="relationship_type">
               <mat-option
                 *ngFor="
                   let gender
@@ -67,7 +78,13 @@
         </div>
       </mat-card>
       <mat-card  class="content-deafult-preference-sections">
-        <mat-card-title>{{dataTexts.preferences.age.title}}</mat-card-title>
+        <div class="contanier-register-title">
+          <mat-icon class="color-purple-brand" svgIcon="tune"></mat-icon>
+          <div>
+            <mat-card-title>{{dataTexts.preferences.age.title}}</mat-card-title>
+            <p class="color-grey-medium pa">{{dataTexts.preferences.age.textInfo}}</p>
+          </div>
+        </div>
         <div class="container-default-inputs-orientation">
           <section class="content-age width-100-per">
             <mat-slider
@@ -77,7 +94,7 @@
               formControlName="age_min"
               #minAge>
             </mat-slider>
-            <p class="color-blue-dark text-age text-center">
+            <p class="color-grey-medium text-age text-center">
               {{dataTexts.preferences.age.minAge}}
               {{minAge.value}}
               {{dataTexts.preferences.age.years}}
@@ -92,7 +109,7 @@
               formControlName="age_max"
               #maxAge>
             </mat-slider>
-            <p class="color-blue-dark text-age text-center">
+            <p class="color-grey-medium text-age text-center">
               {{dataTexts.preferences.age.maxAge}}
               {{maxAge.value}}
               {{dataTexts.preferences.age.years}}

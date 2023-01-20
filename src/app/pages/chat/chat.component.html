@@ -4,7 +4,7 @@ class="container-default-cards-register"
   <section class="container-default-itens-chat flex-1 width-100-per">
     <mat-card class="container-title-register">
       <div class="container-title-register cursor-pointer">
-        <mat-icon class="mat-18 color-magenta-soft">chat_bubble</mat-icon>
+        <mat-icon class="mat-18 color-blue-brand">chat_bubble</mat-icon>
         <mat-card-title>{{dataTexts.chat.matches.title}}</mat-card-title>
       </div>
     </mat-card>
@@ -34,11 +34,11 @@ class="container-default-cards-register"
             </section>
             <section class="container-info color-blue-dark">
               <p
-                class="person-name font-booster-next-bold"
+                class="person-name font-booster-next-bold color-purple-brand"
                 [ngClass]="{'skeleton skeleton-text': match.loading}">{{ match?.target_user?.name }}</p>
               <p
                 *ngIf="match?.latest_message?.content"
-                class="last-message "
+                class="last-message color-grey-medium"
                 [ngClass]="{'skeleton skeleton-text': match.loading}">
                 <span *ngIf="match.latest_message.user_id === userId">
                   {{dataTexts.chat.matches.sentByYou}}

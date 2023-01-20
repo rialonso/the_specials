@@ -153,13 +153,31 @@ footer{
   }
 
 }
-.bg-gradient-magenta-blue {
+.bg-gradient-magenta-blue, .bg-footer-secondary  {
   .container-footer {
-    p, h2 {
+    h2 {
+      color: $blue-brand;
+    }
+    p {
       color: $blue-dark;
     }
     #copyright {
       color: $blue-dark;
+
+    }
+  }
+
+}
+.bg-footer-purple-soft {
+  .container-footer {
+    h2 {
+      color: $blue-medium-logo;
+    }
+    p {
+      color: $grey-medium;
+    }
+    #copyright {
+      color: $grey-medium;
 
     }
   }

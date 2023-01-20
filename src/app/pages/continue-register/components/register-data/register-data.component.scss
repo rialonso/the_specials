@@ -12,6 +12,7 @@
   .container-register-default {
     @include dp-flex-alignment(column, initial, initial);
     gap: 20px;
+    border-radius: 24px;
   }
   .cotainer-data-register {
     border-radius: 20px;

@@ -42,15 +42,12 @@
           <div class="nd" ></div>
           <div class="container-gradient-see-infos cursor-pointer">
             <div class="container-user-info" (click)="viewProfile(match)">
-              <section class="tip-user-type font-booster-next-bold bg-color-blue-dark color-white">
-                {{match?.account_type}}
-              </section>
               <section class="container-user-name-age font-booster-next-bold color-white">
                 {{match?.name}}, {{transformAge(match.birthdate)}}
               </section>
             </div>
             <div class="distance-match">
-              <mat-icon class="color-white"> location_on</mat-icon>
+              <mat-icon class="color-white" svgIcon="mode_of_travel"></mat-icon>
               <p class="color-white ">{{ getDistance(match.distance)}} km from you</p>
             </div>
             <div class="container-buttons-action" style="visibility: hidden;">
@@ -75,7 +72,7 @@
             class="button like-dislike dislike"
             [class.disliked]="disliked"
             >
-            <mat-icon>close</mat-icon>
+            <mat-icon svgIcon="heart_broken"></mat-icon>
           </button>
           <button
           (click)="clickAddMoreMatchAndTransition(enumLikeDislikeAction.LIKE)"

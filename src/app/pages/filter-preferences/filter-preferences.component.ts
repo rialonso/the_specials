@@ -42,6 +42,9 @@ export class FilterPreferencesComponent implements OnInit {
         ''
       ],
       target_account_type: [
+        'special'
+      ],
+      relationship_type: [
         ''
       ],
       age_min: [
@@ -61,18 +64,17 @@ export class FilterPreferencesComponent implements OnInit {
       {
         ...this.state.getValue()?.userData?.data
       }
-    )
+    )    
   }
   async setFilters() {
     const stateUser = this.state.getValue()?.userData?.data;
-    const dataUpdate = {
-      ...stateUser,
-      ...this.formGroup.value
-    }
-    const data = await this.updateDataService.post(dataUpdate, stateUser.id).toPromise();
+    this.formGroup.patchValue({target_account_type: 'special'})
+    console.log(this.formGroup.value);
+    
+    const data = await this.updateDataService.post(this.formGroup.value, stateUser.id).toPromise();
     this.snackBarService.openSnackbarSuccess(
       this.dataTexts.snacksBars.successSaveFilters.mensage,
-      this.dataTexts.snacksBars.successSaveFilters.button);
+      this.dataTexts.snacksBars.successSaveFilters.button);      
     this.navigateTo(EnumRoutesApplication.MATCHS);
   }
   navigateTo(route: string) {

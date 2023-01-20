@@ -4,6 +4,7 @@ import { UserRegistredCorrectService } from 'src/app/core/guards/user-registred-
 import { WhoAreYouRegistredCorrectService } from 'src/app/core/guards/who-are-you-registred-correct/who-are-you-registred-correct.service';
 import { ChangeUserTypeComponent } from './components/change-user-type/change-user-type.component';
 import { RegisterDataComponent } from './components/register-data/register-data.component';
+import { RegisterPicturesComponent } from './components/register-pictures/register-pictures.component';
 import { ContinueRegisterComponent } from './continue-register.component';
 
 const routes: Routes = [
@@ -15,6 +16,12 @@ const routes: Routes = [
         path: 'who-are-you',
         component: ChangeUserTypeComponent,
         canActivate: [WhoAreYouRegistredCorrectService]
+      },
+      {
+        path: 'pictures',
+        component: RegisterPicturesComponent,
+        canActivate: [UserRegistredCorrectService]
+
       },
       {
         path: 'user-data',

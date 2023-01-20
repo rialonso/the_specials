@@ -5,7 +5,7 @@
 
 .button{
   padding: $s-10px;
-  border-radius: 60px;
+  border-radius: 8px;
   width: 100%;
   font-size: 15px;
   line-height: 20px;
@@ -16,32 +16,38 @@
     font-size: 18px;
   }
   &.primary {
-    background: $principal-gradient;
+    background: $purple-brand;
     color: $white;
     &:hover {
-      background: $principal-gradient-hover;
+      background: $purple-brand-hover;
     }
 
   }
   &.secondary {
-    background: $magenta-soft-20;
-    color: $magenta-soft;
+    // background: $magenta-soft-20;
+    // color: $magenta-soft;
+    // &:hover {
+    //   background: $magenta-soft-30;
+    // }
+    border: 1px solid $blue-brand;
+    background: $white;
+    color: $blue-brand;
     &:hover {
-      background: $magenta-soft-30;
+      background: $gray-ultra-soft;
     }
   }
   &.third {
-    border: 1px solid $magenta-soft;
+    border: 1px solid $blue-brand;
     background: $white;
-    color: $magenta-soft;
+    color: $blue-brand;
     &:hover {
       background: $gray-ultra-soft;
     }
   }
   &.stroke-primary {
     background-color: #fff;
-    border: 1px solid $magenta-soft;
-    color: $magenta-soft;
+    border: 1px solid $blue-brand;
+    color: $blue-brand;
   }
   &.icon-text {
     display: flex;
@@ -79,7 +85,7 @@
   &.like-dislike {
     background-color: transparent;
     color: $white;
-    border: 1px solid $white;
+    border: 0;
     @include dp-flex-alignment();
 
     mat-icon {
@@ -92,18 +98,19 @@
       }
     }
     &.like {
-      background-color: $pink-soft;
+      background-color: $green-soft;
       mat-icon {
+        color: $red-default;
         svg {
           path {
-            fill: $magenta-soft;
+            fill: $red-default;
             opacity: 1;
           }
         }
       }
     }
     &.dislike {
-      background: #FFFFFF4D 0% 0% no-repeat padding-box;;
+      background: $red-soft 0% 0% no-repeat padding-box;;
     }
     &.liked {
       border: 1px solid $green-info;

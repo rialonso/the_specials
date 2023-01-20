@@ -1,11 +1,14 @@
 {
   "pt": {
     "firstPage": {
-     "title": "O maior aplicativo de relacionamento feito para pessoas especiais"
+     "title": "conheça aqui alguém tão",
+     "as": "quanto",
+     "special": "especial",
+     "you": "você"
     },
     "policyPrivacy": "Política de Privacidade",
     "termsOfUse": "Termos de Uso",
-    "copyright": "Devotee. Todos direitos reservados.",
+    "copyright": "The Specials. Todos direitos reservados.",
     "getApp": "Baixe o aplicativo!",
     "txtPrivacyAndTerms": "Ao continuar, você concorda com nossos",
     "and": "e",
@@ -23,17 +26,17 @@
         "text": "O maior aplicativo de relacionamento feito para pessoas especiais"
       },
       "simpleMatch": "Agora ficou fácil de conhecer sua cara metade",
-      "devoteeShop": {
+      "DevoteeShop": {
         "title": "Conheça o Devotee Shop",
         "text": "Adquira produtos Devotee para demonstrar seu apoio."
       },
-      "devoteeVideo": {
+      "DevoteeVideo": {
         "title": "Acompanhe o Devotee"
       },
       "followUs": {
         "title": "Siga-nos"
       },
-      "devoteeMidia" : {
+      "DevoteeMidia" : {
         "title": "O Devotee na mídia"
       }
     },
@@ -49,8 +52,8 @@
       "name": "Digite seu nome"
     },
     "buttonsSignin": {
-      "btnContinue": "Continuar",
-      "btnRegister": "Cadastrar",
+      "btnContinue": "Entrar",
+      "btnRegister": "Criar conta",
       "btnQrCode": "Continuar com",
       "btnGoogle": "Continuar com Google"
     },
@@ -61,7 +64,9 @@
       "btnBack": "Voltar"
     },
     "registerPg": {
-      "title": "Cadastrar"
+      "title": "Cadastrar",
+      "text": "<div> Agora me conta um pouco <span class='color-blue-brand'>sobre você?</span>?</div>"
+
     },
     "buttons": {
       "btnContinue": "Continuar",
@@ -75,7 +80,9 @@
       "btnEntry" : "Entrar",
       "btnAccess": "Acesse",
       "btnRegisterSe": "Cadastre-se",
-      "btnShop": "Loja"
+      "btnShop": "Loja",
+      "btnNotNow": "Agora não"
+
     },
     "inputs": {
       "genericErrors": {
@@ -143,7 +150,7 @@
         }
       },
       "sexualOrientation": {
-        "label": "Orientação sexual",
+        "label": "Sexualidade",
         "placeHolder": "Selecione sua orientação sexual",
         "errors" : {
           "none": "none"
@@ -171,7 +178,7 @@
         }
       },
       "selectICD": {
-        "label": "Classificação Internacional de Doenças (CID)",
+        "label": "CID`s",
         "placeHolder": "Selecion as CIDs",
         "errors" : {
           "none": "none"
@@ -185,14 +192,14 @@
         }
       },
       "selectMedications": {
-        "label": "Medicações que utilizo",
+        "label": "Medicamentos",
         "placeHolder": "Medicações ou drogas",
         "errors" : {
           "none": "none"
         }
       },
       "selectHospitals": {
-        "label": "Hospitais que frequento",
+        "label": "Hospitais",
         "placeHolder": "Hospitals que frequento",
         "errors" : {
           "none": "none"
@@ -276,22 +283,30 @@
       }
     },
     "eticalRules": {
-      "welcome": "Bem-vindo(a) ao",
-      "followRules": "Siga as regras abaixo",
+      "welcome": "Seja bem-vindo(a) ao",
+      "followRules": "Para garantirmos a segurança e bem-estar de nossos usuários, solicitamos que se atente às regras abaixo",
       "rules": {
         "firstRule": {
           "title": "Seja você mesmo",
-          "text": "Use suas próprias fotos, idade e biografia."
+          "text": "<span class='color-red-default'>Não </span> utilize fotos e biografias de outras pessoas"
         },
         "secondRule": {
-          "title": "Esteja seguro",
-          "text": "Não repasse suas informações pessoais de forma rápida."
+          "title": "Cuidado com suas informações",
+          "text": "<span class='color-red-default'>Não </span> passe dados pessoais, como documentos, cartões ou endereços para pessoas desconhecidas"
         },
         "thirdRule": {
+          "title": "Rede social exclusiva",
+          "text": "A rede social <span class='color-blue-brand'>The Specials </span> foi desenvolvida exclusivamente para pessoas <span class='color-blue-brand'>especiais</span>, caso não possua nenhuma deficiência, instruímos que utilize o aplicativo <span class='color-purple-brand'>Devotee</span>"
+        },
+        "forthRule": {
           "title": "Respeite os outros",
-          "text": "Respeite outras pessoas e trate a todos como você gostaria de ser tratado"
+          "text": "<span class='color-red-default'>Respeite outras pessoas </span> e trate a todos como você gostaria de ser tratado"
         }
       }
+    },
+    "registerPictures": {
+      "register": "Cadastro",
+      "text": "<div> Chegou a hora de nos conhecermos melhor. </div> <div>Para começar, que tal nos mostrar suas <span class='color-blue-brand'>melhores fotos </span>?</div>"
     },
     "errors": {
       "credentials": "Credenciais incorretas",
@@ -317,9 +332,20 @@
     "iamEspecialAndDevotee": {
       "headerYourProfile":"Seu Perfil",
       "titleProfilePicture":"Foto de perfil",
-      "titleMorePictures":"Fotos",
-      "titleAboutYourself":"Sobre você",
-      "titleAboutYourDisability":"Sobre sua deficiência",
+
+      "titleMorePictures": {
+        "title": "Galeria",
+        "textInfo": "A foto que estiver na primeira posição, será sua foto de perfil"
+      },
+      "titleAboutYourself": {
+        "title": "Informações pessoais",
+        "textInfo": "Informações básicas para te conhecer um pouco melhor"
+      },
+      "titleAboutYourDisability": {
+        "title": "Informações médicas",
+        "textInfo": "Informações sobre sua(s) deficiência(s)"
+      },
+
       "btnNext":"Proximo"
     },
     "genders": [
@@ -418,7 +444,7 @@
       },
       {
         "label": "Especial",
-        "value": "Special"
+        "value": "special"
       },
       {
         "label": "Todos",
@@ -449,6 +475,21 @@
       {
         "label": "Deixar acontecer",
         "value": "sex_happen"
+      }
+      
+    ],
+    "targetGenders": [
+      {
+        "label": "Homem",
+        "value": "male"
+      },
+      {
+        "label": "Mulher",
+        "value": "female"
+      },
+      {
+        "label": "Todos",
+        "value": "all"
       }
     ],
     "activateLocation": {
@@ -510,17 +551,22 @@
       "prejudice":"Exemplo de superção"
     },
     "preferences": {
-      "title": "Editar preferências",
+      "title": "Preferências",
+      "textInfo": "Defina aqui as preferências de busca",
       "locale": {
         "title":  "Localização",
-        "distance": "Raio de busca:",
+        "textInfo": "Raio de busca",
+        "distance": "Buscando usuários até",
         "sufixDistance": "km"
       },
       "userPreference": {
-        "title":  "Preferências de usuário"
+        "title":  "Preferências de usuário",
+        "textInfo": "Preferências de gênero e tipo de relacionamento"
+
       },
       "age": {
         "title": "Idade",
+        "textInfo": "Age range you want",
         "minAge": "Idade mínima",
         "maxAge": "Idade máxima",
         "years": "anos"
@@ -576,11 +622,14 @@
   },
   "us": {
     "firstPage": {
-      "title": "The best relationship app made for special people"
+      "title": "meet someone as",
+      "as": "as",
+      "special": "special",
+      "you": "you"
     },
     "policyPrivacy": "Privacy Policy",
     "termsOfUse": "Terms of use",
-    "copyright": "Devotee. All rights reserved.",
+    "copyright": "The Specials. All rights reserved.",
     "getApp": "Get the app",
     "txtPrivacyAndTerms": "by continuing you agree with",
     "and": "and",
@@ -598,18 +647,18 @@
         "text": "The biggest app to persons with special needs."
       },
       "simpleMatch": "Now is simple meet your soulmate",
-      "devoteeShop": {
-        "title": "Meet devotee shop",
+      "DevoteeShop": {
+        "title": "Meet Devotee shop",
         "text": "Get products to show your support"
       },
-      "devoteeVideo": {
+      "DevoteeVideo": {
         "title": "Follow Devotee"
       },
       "followUs": {
         "title": "Follow-us"
       },
-      "devoteeMidia" : {
-        "title": "The devotee in the media"
+      "DevoteeMidia" : {
+        "title": "The Devotee in the media"
       }
     },
     "signin": {
@@ -624,8 +673,8 @@
       "name": "Type your name"
     },
     "buttonsSignin": {
-      "btnContinue": "Continue",
-      "btnRegister": "Register",
+      "btnContinue": "Sing in",
+      "btnRegister": "Create account",
       "btnQrCode": "Continue with",
       "btnGoogle": "Continue with Google"
     },
@@ -636,7 +685,8 @@
       "btnBack": "Back"
     },
     "registerPg": {
-      "title": "Register"
+      "title": "Register",
+      "text": "<div>Now tell me a little  <span class='color-blue-brand'>about yourself?</span>?</div>"
     },
     "buttons": {
       "btnContinue": "Continue",
@@ -650,7 +700,9 @@
       "btnEntry" : "Login",
       "btnAccess": "Sign in",
       "btnRegisterSe": "Register",
-      "btnShop": "Shop"
+      "btnShop": "Shop",
+      "btnNotNow": "Not now"
+
 
     },
     "inputs": {
@@ -718,8 +770,8 @@
         }
       },
       "sexualOrientation": {
-        "label": "Sexual orientation",
-        "placeHolder": "Enter your sexual orientation",
+        "label": "Sexuality",
+        "placeHolder": "Enter your Sexuality",
         "errors" : {
           "none": "none"
         }
@@ -746,7 +798,7 @@
         }
       },
       "selectICD": {
-        "label": "Internetional classification of diseases (ICD)",
+        "label": "ICD`s",
         "placeHolder": "Select the ICDs",
         "errors" : {
           "none": "none"
@@ -760,14 +812,14 @@
         }
       },
       "selectMedications": {
-        "label": "Medications i take",
+        "label": "Medications",
         "placeHolder": "Medications or drugs",
         "errors" : {
           "none": "none"
         }
       },
       "selectHospitals": {
-        "label": "Hospitals i go",
+        "label": "Hospitals",
         "placeHolder": "Medical center i go",
         "errors" : {
           "none": "none"
@@ -852,21 +904,29 @@
     },
     "eticalRules": {
       "welcome": "Welcome to",
-      "followRules": "Follow the rules below",
+      "followRules": "To ensure the safety and well-being of our users, we ask that you pay attention to the rules below",
       "rules": {
         "firstRule": {
           "title": "Be Yourself",
-          "text": "Use their own pictures, age ande biography."
+          "text": "<span class='color-red-default'>Don't use</span>  other people's photos and biographies."
         },
         "secondRule": {
-          "title": "Be safe",
-          "text": "Don't pass your information quickly"
+          "title": "Be careful with your information",
+          "text": "<span class='color-red-default'>Do not </span> pass personal data such as documents, cards or addresses to unknown persons."
         },
         "thirdRule": {
-          "title": "Respect all users",
-          "text": "Respect all peoples and treat everyone as you would like to be treated"
+          "title": "Exclusive social network",
+          "text": "<span class='color-blue-brand'>The Specials </span> social network was developed exclusively for  <span class='color-blue-brand'>special </span>people,  if you do not have any disability, we instruct you to use the <span class='color-purple-brand'>Devotee</span> application."
+        },
+        "forthRule": {
+          "title": "Respect others",
+          "text": "<span class='color-red-default'>Respect other people  </span> and treat others as you would like to be treated."
         }
       }
+    },
+    "registerPictures": {
+      "register": "Register",
+      "text": "<div> The time has come for us to get to know each other better. </div> <div>To start, would you like show your <span class='color-blue-brand'>better picture </span>?</div>"
     },
     "errors": {
       "credentials": "Incorrect credentials",
@@ -875,9 +935,18 @@
     "iamEspecialAndDevotee":{
       "headerYourProfile":"Your profile",
       "titleProfilePicture":"Profile picture",
-      "titleMorePictures":"Pictures",
-      "titleAboutYourself":"About yourself",
-      "titleAboutYourDisability":"About or disability",
+      "titleMorePictures": {
+        "title": "Gallery",
+        "textInfo": "The photo that is in the first position will be your profile picture"
+      },
+      "titleAboutYourself": {
+        "title": "Personal information",
+        "textInfo": "Basic information to get to know you a little better"
+      },
+      "titleAboutYourDisability": {
+        "title": "medical information",
+        "textInfo": "Information about your disability(ies)"
+      },
       "btnNext":"Proximo"
     },
     "changeUserType":{
@@ -993,7 +1062,7 @@
       },
       {
         "label": "Special",
-        "value": "Special"
+        "value": "special"
       },
       {
         "label": "All",
@@ -1096,16 +1165,22 @@
     },
     "preferences": {
       "title": "Edit preferences",
+      "textInfo": "Gender preferences and relationship type",
+
       "locale": {
         "title":  "Localization",
-        "distance": "Search radius:",
+        "textInfo": "Search radius:",
+        "distance": "using users until",
         "sufixDistance": "mile"
       },
       "userPreference": {
-        "title":  "User prefenreces"
+        "title":  "User preferences",
+        "textInfo": "Gender preferences and relationship type"
+
       },
       "age": {
         "title": "Age",
+        "textInfo": "Intervalo de idade que você deseja",
         "minAge": "Min age",
         "maxAge": "Max age",
         "years": "years"

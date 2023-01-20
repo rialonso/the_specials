@@ -6,11 +6,14 @@
 .content-sign-in {
   .content-header-sign-in {
     display: flex;
-    justify-content: space-between;
+    justify-content: initial;
+    @include min-tablet {
+      justify-content: center;
+    }
     .title-sign-return {
       display: flex;
-      flex-direction: column;
-      gap: 30px;
+      flex-direction: row;
+      gap: 15px;
     }
     mat-icon {
       background-color: $gray-soft;
@@ -32,6 +35,12 @@
     width: $s-100per;
     flex-direction: column;
     margin-top: $s-20px;
+  }
+  .container-remember-password {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid $grey-soft;
   }
 }
 .container-buttons- {
@@ -64,4 +73,6 @@
 .infos-about-app {
   text-align: center;
 }
-
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent; 
+}

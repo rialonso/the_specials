@@ -60,7 +60,7 @@
         padding-left: 5px;
       }
       h3, h4 {
-        color: $blue-dark;
+        color: $blue-brand;
         font-family: $font-booster-next-bold;
       }
       .container-default-infos-disability {
@@ -74,7 +74,7 @@
         .container-default-personal-info {
           @include dp-flex-alignment(row, center, flex-start);
           gap: 5px;
-          color: $blue-dark;
+          color: $blue-brand;
         }
       }
       .disability-list {

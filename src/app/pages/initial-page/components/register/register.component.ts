@@ -17,6 +17,8 @@ import { AddDataRegister } from 'src/app/state-management/register/register.acti
 import { RegisterService } from 'src/app/core/services/register/register.service';
 import { AddAllDataUser } from 'src/app/state-management/user-data/user-data.action';
 import { DialogsService } from 'src/app/shared/functions/dialogs/dialogs.service';
+import { EnumUserType } from 'src/app/shared/enum/user-types/user-type.enum';
+import { UpdateDataService } from 'src/app/core/services/update-data/update-data.service';
 
 @Component({
   selector: 'app-register',
@@ -44,9 +46,10 @@ export class RegisterComponent implements OnInit {
     private translateService: TranslateService,
     private routerService: RouteService,
     private formBuilder: FormBuilder,
-    private verifyEmailService: VerifyEmailService,
     private registerService: RegisterService,
     private dialogsService: DialogsService,
+    private updateDataService: UpdateDataService,
+
   ) {
     this.store.select('controlsApp')
     .pipe(takeUntil(this.destroy$))
@@ -99,47 +102,51 @@ export class RegisterComponent implements OnInit {
   }
   async verifyEmail() {
     const email = this.formGroup.get('email');
-    if (email.valid) {
-      this.verifyEmailService
-        .post({email: email.value})
-        .pipe(takeUntil(this.destroy$))
-        .subscribe(
-          responseVerifyEmail => {},
-          responseVerifyEmail => {
-            console.log(responseVerifyEmail);
-            const responseError = responseVerifyEmail?.error?.errors;
-            if (responseError.email
-              && responseError.email[0] === "Email já está em uso.") {
-              this.showErrorCredentials
-              = new ModelErrors(
-                true,
-                this.dataTexts.errors.existingEmail
-              )
-            } else {
-              this.showErrorCredentials
-              = new ModelErrors(
-                false,
-               ''
-              )
-            }
-        }
-      );
-    }
+    // if (email.valid) {
+    //   this.verifyEmailService
+    //     .post({email: email.value})
+    //     .pipe(takeUntil(this.destroy$))
+    //     .subscribe(
+    //       responseVerifyEmail => {},
+    //       responseVerifyEmail => {
+    //         console.log(responseVerifyEmail);
+    //         const responseError = responseVerifyEmail?.error?.errors;
+    //         if (responseError.email
+    //           && responseError.email[0] === "Email já está em uso.") {
+    //           this.showErrorCredentials
+    //           = new ModelErrors(
+    //             true,
+    //             this.dataTexts.errors.existingEmail
+    //           )
+    //         } else {
+    //           this.showErrorCredentials
+    //           = new ModelErrors(
+    //             false,
+    //            ''
+    //           )
+    //         }
+    //     }
+    //   );
+    // }
   }
   async continueToRegister() {
     if (this.formGroup.valid) {
-      this.loading = true;
-      const registerData = await this.registerService.post(this.formGroup.value).toPromise();
-      this.store.dispatch(new AddAllDataUser(registerData));
+      this.loading = true;      
+      const registerData =  await this.registerService.post({...this.formGroup.value, account_type: EnumUserType.SPECIAL}).toPromise();
+      if (registerData.message && registerData.message === "Email em uso") {
+        this.showErrorCredentials
+        = new ModelErrors(
+          true,
+          this.dataTexts.errors.existingEmail
+        )
+        this.loading = false;
+
+      }
+      this.store.dispatch(new AddAllDataUser(registerData));      
       this.loading = false;
-      this.navigateTo(EnumRoutesApplication.REGISTER_WHO_ARE_YOU);
+      this.navigateTo(EnumRoutesApplication.RULES);
+    
     }
 
-  }
-  openTerms() {
-    this.dialogsService.openTerms();
-  }
-  openPrivacy() {
-    this.dialogsService.openPrivacy();
   }
 }

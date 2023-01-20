@@ -13,6 +13,8 @@
   box-sizing: border-box;
   background-color: $white;
   mat-icon {
+    min-width: 20px;
     width: $s-20px;
+    color: $purple-brand;
   }
 }

@@ -15,10 +15,10 @@ export class IconModule {
       .addSvgIcon('logo_google', this.setPath(`${this.path}/logo-google.svg`))
       .addSvgIcon('icon_qr_code', this.setPath(`${this.path}/qr_code.svg`))
       .addSvgIcon('logo_raposo_shoping', this.setPath(`${this.path}/logo-raposo-shopping.svg`))
-      .addSvgIcon('check_magenta', this.setPath(`${this.path}/check.svg`))
+      .addSvgIcon('check', this.setPath(`${this.path}/check.svg`))
       .addSvgIcon('camera_add_picture', this.setPath(`${this.path}/camera-add-picture.svg`))
       .addSvgIcon('heart', this.setPath(`${this.path}/heart.svg`))
-
+      .addSvgIcon('logo', this.setPath(`${this.path}/logo.svg`))
       .addSvgIcon('add_location', this.setPath(`${this.path}/add_location.svg`))
       .addSvgIcon('change_password', this.setPath(`${this.path}/change-password.svg`))
       .addSvgIcon('interests', this.setPath(`${this.path}/interests.svg`))
@@ -27,7 +27,15 @@ export class IconModule {
       .addSvgIcon('logo_facebook', this.setPath(`${this.path}/logo-facebook.svg`))
       .addSvgIcon('logo_instagram', this.setPath(`${this.path}/logo-instagram.svg`))
       .addSvgIcon('logo_youtube', this.setPath(`${this.path}/logo-youtube.svg`))
+      .addSvgIcon('gallery', this.setPath(`${this.path}/gallery.svg`))
+      .addSvgIcon('assignment_ind', this.setPath(`${this.path}/assignment_ind.svg`))
+      .addSvgIcon('local_hospital', this.setPath(`${this.path}/local_hospital.svg`))
+      .addSvgIcon('heart_broken', this.setPath(`${this.path}/heart_broken.svg`))
+      .addSvgIcon('mode_of_travel', this.setPath(`${this.path}/mode_of_travel.svg`))
+      .addSvgIcon('tune', this.setPath(`${this.path}/tune.svg`))
+      .addSvgIcon('date_range', this.setPath(`${this.path}/date_range.svg`))
 
+      
       ;
 
     }

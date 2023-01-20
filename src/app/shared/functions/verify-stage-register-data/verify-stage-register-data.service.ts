@@ -30,14 +30,19 @@ export class VerifyStageRegisterDataService {
     const dataRegister: IRegisterUser  = this.state.getValue().registerData;
     if (!dataRegister.account_type) {
       this.routeService.navigateToURL(EnumRoutesApplication.REGISTER_WHO_ARE_YOU);
+    }  else if(
+      dataRegister.profile_picture == null || dataRegister.profile_picture.length === 0
+    ) {
+      this.routeService.navigateToURL(EnumRoutesApplication.REGISTER_PICTURES);
+      return false;
     } else if(
-      !dataRegister.address_description
-      || !dataRegister.birthdate
-      || !dataRegister.gender
-      || !dataRegister.lat
-      || !dataRegister.lng
-      || !dataRegister.sexual_orientation
-      || !dataRegister.name
+      (!dataRegister.address_description
+        || !dataRegister.birthdate
+        || !dataRegister.gender
+        || !dataRegister.lat
+        || !dataRegister.lng
+        || !dataRegister.sexual_orientation
+        || !dataRegister.name ) && dataRegister.profile_picture
     ) {
       this.routeService.navigateToURL(EnumRoutesApplication.REGISTER_USER_DATA);
     } else {

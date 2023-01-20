@@ -26,18 +26,23 @@ export class UserRegistredCorrectService implements CanActivate {
     ): Observable<boolean> | boolean {
      this.verifyStageRegisterDataService.getUserData();
      const dataRegister: IRegisterUser  = this.state.getValue().registerData;
+     
      if (!dataRegister.account_type) {
-      this.routeService.navigateToURL(EnumRoutesApplication.REGISTER_WHO_ARE_YOU)
+      this.routeService.navigateToURL(EnumRoutesApplication.RULES)
       return false;
 
       } else if(
-        !dataRegister.address_description
+        dataRegister.profile_picture == null || dataRegister.profile_picture.length === 0
+      ) {
+        return true;
+      }else if(
+        (!dataRegister.address_description
         || !dataRegister.birthdate
         || !dataRegister.gender
         || !dataRegister.lat
         || !dataRegister.lng
         || !dataRegister.sexual_orientation
-        || !dataRegister.name
+        || !dataRegister.name ) && dataRegister.profile_picture
       ) {
         return true;
       }

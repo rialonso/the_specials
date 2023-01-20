@@ -22,12 +22,7 @@ import { GetHosptalsService } from 'src/app/core/services/get-hosptals/get-hospt
 import { GetMedicalProceduresService } from 'src/app/core/services/get-medical-procedures/get-medical-procedures.service';
 import { ModelCidsResponse } from 'src/app/shared/model/response/get-cids/get-cids.model';
 import { Observable, ReplaySubject } from 'rxjs';
-import { GetMedicinesService } from 'src/app/core/services/get-medicines/get-medicines.service';
-import { EnumItensResponseTypeSpecial } from './enum/itens-response.enum';
-import { Params } from '@angular/router';
 import { AddDataRegister } from 'src/app/state-management/register/register.action';
-import { RegisterService } from 'src/app/core/services/register/register.service';
-import { ProfilePicturesService } from 'src/app/core/services/profile-pictures/profile-pictures.service';
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { GetSelectsSpecialPersonService } from 'src/app/shared/functions/get-selects-special-person/get-selects-special-person.service';
@@ -43,18 +38,17 @@ import { EnumGenders } from 'src/app/shared/enum/genders/genders.enum';
 })
 export class RegisterDataComponent implements OnInit {
   dataTexts;
-  imagesURL;
   genderList;
   sexualOrientationList;
-
+  
   laguagesApplication = EnumLanguages
   usageLaguage: string;
+  headerInfos: string;
 
   imagesTypes = ImagesTypes;
   errorsEnum = ErrorsEnum;
   enumRouterApp = EnumRoutesApplication;
 
-  imagesList = [];
   formGroup: FormGroup;
   specialAccount = false;
   showWasBorn = false;
@@ -79,8 +73,6 @@ export class RegisterDataComponent implements OnInit {
     private dialogsService: DialogsService,
     private changeMaskService: ChangeMaskService,
     private stateManagementFuncService: StateManagementFuncService,
-    private registerService: RegisterService,
-    private profilePicturesService: ProfilePicturesService,
     private getSelectsSpecialPersonService: GetSelectsSpecialPersonService,
     private updateDataService: UpdateDataService,
 
@@ -89,6 +81,7 @@ export class RegisterDataComponent implements OnInit {
   ) {
     this.dataTexts = this.translateService?.textTranslate;
     this.usageLaguage = translateService?.dataFormatation;
+    this.headerInfos = this.dataTexts.registerPictures.text
     this.minDate = moment().subtract(100, 'years').toDate();
     this.maxDate = moment().subtract(18, 'years').toDate();
   }
@@ -105,20 +98,6 @@ export class RegisterDataComponent implements OnInit {
     this.openModalActivateLocation();
   }
   setDataInFormWheDataRecovered() {
-    const registerData = this.state.getValue()?.registerData
-    if (registerData.profile_picture !== null) {
-      if (registerData?.profile_picture[0]) {
-        this.imagesURL = {
-          ...this.imagesURL,
-          [this.imagesTypes.FIRST_IMAGE]: `${environment.urlImages}${registerData?.profile_picture[0]?.path}`
-        }
-      } else {
-        this.imagesURL = {
-          ...this.imagesURL,
-        }
-      }
-    }
-
     this.formGroup.patchValue(
       {
         ...this.state.getValue()?.registerData
@@ -170,42 +149,6 @@ export class RegisterDataComponent implements OnInit {
 
     })
   }
-  selectedImage(files: File, imageType: ImagesTypes) {
-    // const controlPictures = this.formGroup.get('profile_picture');
-    if (files && files[0]) {
-      // (controlPictures as FormArray).push(this.formBuilder.group(files[0]));
-      const reader = new FileReader();
-      reader.readAsDataURL(files[0]);
-      reader.onload = (evt) => {
-        switch (imageType) {
-          case ImagesTypes.FIRST_IMAGE:
-            this.addImagesURL(ImagesTypes.FIRST_IMAGE, evt.target.result);
-            this.imagesList[0] = files[0];
-            break;
-          case ImagesTypes.SECOND_IMAGE:
-            this.addImagesURL(ImagesTypes.SECOND_IMAGE, evt.target.result);
-            this.imagesList[1] = files[0];
-            break;
-          case ImagesTypes.THIRD_IMAGE:
-            this.addImagesURL(ImagesTypes.THIRD_IMAGE, evt.target.result);
-            this.imagesList[2] = files[0];
-            break;
-          case ImagesTypes.FORTY_IMAGE:
-            this.addImagesURL(ImagesTypes.FORTY_IMAGE, evt.target.result);
-            this.imagesList[3] = files[0];
-            break;
-          default:
-            break;
-        }
-      };
-    }
-  }
-  addImagesURL(key, value) {
-    this.imagesURL = {
-      ...this.imagesURL,
-      [key]: value
-    }
-  }
   get controlsForm() { return this.formGroup.controls; }
   addControlsTypeSpecial(): void {
     const controlsSpecial = [
@@ -222,7 +165,7 @@ export class RegisterDataComponent implements OnInit {
         this.formGroup
         .addControl(
           value,
-          this.formBuilder.control('', Validators.required));
+          this.formBuilder.control(''));
       }
 
     });
@@ -231,7 +174,7 @@ export class RegisterDataComponent implements OnInit {
     const controlsSpecial = [
       ...searchSpecialPerson,
       ...inputsSpecialPerson,
-    ];
+    ];    
     controlsSpecial.forEach((value: string) => {
       this.formGroup.removeControl(value);
     });
@@ -272,9 +215,7 @@ export class RegisterDataComponent implements OnInit {
           disability: this.setDataToSpecialPerson()
         }
       }
-      if(this.imagesList.length > 0) {
-        await this.profilePicturesService.post(this.setFormDataToSendFiles()).toPromise();
-      }
+      
       await this.updateDataService.post(updateData, this.state.getValue().userData.data.id).toPromise();
       this.loading = false;
       this.navigateTo(EnumRoutesApplication.MATCHS);
@@ -308,13 +249,7 @@ export class RegisterDataComponent implements OnInit {
 
     return newArrayValue;
   }
-  setFormDataToSendFiles() {
-    const formData = new FormData();
-    for (let i = 0; i < this.imagesList.length; i++) {
-      formData.append('image[]', this.imagesList[i]);
-    }
-    return formData;
-  }
+
   genderChanged(value) {
     if (
         value !== 'male'

@@ -1,90 +1,18 @@
 <div id="container-register-data" class="container-default-cards-register">
-  <mat-card class="container-title-register">
-    <div class="container-title-register cursor-pointer" (click)="navigateTo(enumRouterApp.REGISTER_WHO_ARE_YOU)">
-      <mat-icon class="mat-18 color-magenta-soft">arrow_back_ios</mat-icon>
-      <mat-card-title>{{dataTexts.iamEspecialAndDevotee.headerYourProfile}}</mat-card-title>
-    </div>
-  </mat-card>
+  <app-register-step-header-info [infos]="headerInfos"></app-register-step-header-info>
+
   <div class="container-type-data-default">
     <main class="content-register-data">
       <form [formGroup]="formGroup">
-        <mat-card class="container-others-pictures container-register-default cotainer-data-register">
-          <mat-card-title>{{dataTexts.iamEspecialAndDevotee.titleMorePictures}}</mat-card-title>
-          <div class="more-pictures">
-            <div class="more-photos flex-1 cursor-pointer">
-              <label for="more-photos-1" class="cursor-pointer">
-                <mat-icon class="profile-img"*ngIf="!imagesURL?.firstImage">
-                  add_circle
-                </mat-icon>
-                <div *ngIf="imagesURL?.firstImage">
-                  <img class="" src={{imagesURL?.firstImage}} alt="">
-                </div>
-              </label>
-
-              <input
-                type="file"
-                id="more-photos-1"
-                name="more-photos-1"
-                accept="image/png, image/jpeg"
-                class="input-file input-photo-principal"
-                (change)="selectedImage($event.target.files, imagesTypes.FIRST_IMAGE)">
-            </div>
-            <div class="more-photos flex-1 cursor-pointer">
-              <label for="more-photos-2" class="cursor-pointer">
-                <mat-icon class="profile-img" *ngIf="!imagesURL?.secondImage">
-                  add_circle
-                </mat-icon>
-                <div class="profile-img" *ngIf="imagesURL?.secondImage">
-                  <img class="" src={{imagesURL?.secondImage}} alt="">
-                </div>
-              </label>
-
-              <input
-                type="file"
-                id="more-photos-2"
-                name="more-photos-2"
-                accept="image/png, image/jpeg"
-                class="input-file input-photo-principal"
-                (change)="selectedImage($event.target.files, imagesTypes.SECOND_IMAGE)">
-            </div>
-            <div class="more-photos flex-1 cursor-pointer" >
-              <label for="more-photos-3" class="cursor-pointer">
-                <mat-icon class="profile-img" *ngIf="!imagesURL?.thirdImage">
-                  add_circle
-                </mat-icon>
-                <div class="profile-img" *ngIf="imagesURL?.thirdImage">
-                  <img class="" src={{imagesURL?.thirdImage}} alt="">
-                </div>
-              </label>
-              <input
-                type="file"
-                id="more-photos-3"
-                name="more-photos-3"
-                accept="image/png, image/jpeg"
-                class="input-file input-photo-principal"
-                (change)="selectedImage($event.target.files, imagesTypes.THIRD_IMAGE)">
-            </div>
-            <div class="more-photos flex-1 cursor-pointer" >
-              <label for="more-photos-4" class="cursor-pointer">
-                <mat-icon class="profile-img" *ngIf="!imagesURL?.fortyImage">
-                  add_circle
-                </mat-icon>
-                <div class="profile-img" *ngIf="imagesURL?.fortyImage">
-                  <img class="" src={{imagesURL?.fortyImage}} alt="">
-                </div>
-              </label>
-              <input
-                type="file"
-                id="more-photos-4"
-                name="more-photos-4"
-                accept="image/png, image/jpeg"
-                class="input-file input-photo-principal"
-                (change)="selectedImage($event.target.files, imagesTypes.FORTY_IMAGE)">
-            </div>
-          </div>
-        </mat-card>
         <mat-card class="container-data-person container-register-default cotainer-data-register">
-          <mat-card-title>{{dataTexts.iamEspecialAndDevotee.titleAboutYourself}}</mat-card-title>
+          <div class="contanier-register-title">
+            <mat-icon class="color-purple-brand" svgIcon="assignment_ind"></mat-icon>
+            <div>
+              <mat-card-title class="color-grey-medium">{{dataTexts.iamEspecialAndDevotee.titleAboutYourself.title}}</mat-card-title>
+              <p class="color-grey-medium pa">{{dataTexts.iamEspecialAndDevotee.titleAboutYourself.textInfo}}</p>
+            </div>
+    
+          </div>
           <div class="container-default-inputs-orientation content-data-person">
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>{{dataTexts.inputs.name.label}}</mat-label>
@@ -226,7 +154,14 @@
           </div>
         </mat-card>
         <mat-card *ngIf="specialAccount" class="container-data-disability container-register-default cotainer-data-register">
-          <mat-card-title>{{dataTexts.iamEspecialAndDevotee.titleAboutYourDisability}}</mat-card-title>
+          <div class="contanier-register-title">
+            <mat-icon class="color-purple-brand" svgIcon="local_hospital"></mat-icon>
+            <div>
+              <mat-card-title>{{dataTexts.iamEspecialAndDevotee.titleAboutYourDisability.title}}</mat-card-title>
+              <p class="color-grey-medium pa">{{dataTexts.iamEspecialAndDevotee.titleAboutYourDisability.textInfo}}</p>
+            </div>
+    
+          </div>
           <div class="container-default-inputs-orientation content-data-person">
             <mat-form-field appearance="fill">
               <mat-label>{{ dataTexts.inputs.selectICD.label }}</mat-label>
