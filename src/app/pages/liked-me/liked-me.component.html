@@ -1,6 +1,6 @@
 <main class="container-liked-me container-default-cards-register">
   <section class="content-title">
-    <mat-icon class="color-magenta-soft">favorite
+    <mat-icon class="color-blue-brand">favorite
     </mat-icon>
     <span class="color-blue-dark font-booster-next-bold f-size-24">{{dataTexts.likedMe.title}}</span>
   </section>
@@ -18,15 +18,15 @@
           <div>
 
           </div>
-          <div class="width-100-per">
-            <section class="tip-user-type font-booster-next-bold bg-color-blue-dark color-white">
+          <div class="width-100-per container-infos-about-likes">
+            <!-- <section class="tip-user-type font-booster-next-bold bg-color-blue-dark color-white">
               {{liked?.user?.account_type? liked?.user?.account_type: 'sem'}}
-            </section>
+            </section> -->
             <section class="container-user-name-age font-booster-next-bold color-white">
               {{liked?.user?.name}}, {{transformAge(liked?.user?.birthdate)}}
 
             </section>
-            <section class="container-hour-ago color-magenta-soft font-booster-next-bold">
+            <section class="container-hour-ago color-white font-booster-next-bold">
               <span> {{calculateHoursAgo(liked?.updated_at)}}</span>
               <span>
                 <mat-icon class="mat-18 color-white">info</mat-icon>
