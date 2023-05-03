@@ -33,7 +33,7 @@ export class RegisterPicturesComponent implements OnInit {
 
   ) { 
     this.dataTexts = this.translateService?.textTranslate;
-    this.headerInfos = this.dataTexts.registerPg.text
+    this.headerInfos = this.dataTexts.registerPictures.text;
 
   }
 
