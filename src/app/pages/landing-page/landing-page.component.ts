@@ -26,8 +26,6 @@ export class LandingPageComponent implements OnInit {
   }
   navigateTo(route: EnumRoutesApplication) {
     this.routeService.navigateToURL(route);
-    // this.store.dispatch(new AddControlApp({ openSingIn: true }));
-
   }
   goToLoginOrRegister(route: EnumRoutesApplication) {
     this.navigateTo(route);
