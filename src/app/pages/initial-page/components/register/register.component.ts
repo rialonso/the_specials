@@ -5,7 +5,6 @@ import { State, Store } from '@ngrx/store';
 import { ReplaySubject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { TranslateService } from 'src/app/core/services/translate/translate.service';
-import { VerifyEmailService } from 'src/app/core/services/verify-email/verify-email.service';
 import { IHeaderCardsInitialPage } from 'src/app/shared/components/header-cards-initial-page/model/header-cards.data';
 import { EnumRoutesApplication } from 'src/app/shared/enum/routes.enum';
 import { RouteService } from 'src/app/shared/functions/routes/route.service';
@@ -13,12 +12,9 @@ import { ModelErrors } from 'src/app/shared/model/errors/errors.model';
 import { MHeaderCardsInitialPage } from 'src/app/shared/model/header-cards-initial-page/header-cards-initial-page.enum';
 import { IAppState } from 'src/app/state-management/app.model';
 import { AddControlApp } from 'src/app/state-management/controls/copntrols-app.action';
-import { AddDataRegister } from 'src/app/state-management/register/register.action';
 import { RegisterService } from 'src/app/core/services/register/register.service';
 import { AddAllDataUser } from 'src/app/state-management/user-data/user-data.action';
-import { DialogsService } from 'src/app/shared/functions/dialogs/dialogs.service';
 import { EnumUserType } from 'src/app/shared/enum/user-types/user-type.enum';
-import { UpdateDataService } from 'src/app/core/services/update-data/update-data.service';
 
 @Component({
   selector: 'app-register',
@@ -47,8 +43,6 @@ export class RegisterComponent implements OnInit {
     private routerService: RouteService,
     private formBuilder: FormBuilder,
     private registerService: RegisterService,
-    private dialogsService: DialogsService,
-    private updateDataService: UpdateDataService,
 
   ) {
     this.store.select('controlsApp')
