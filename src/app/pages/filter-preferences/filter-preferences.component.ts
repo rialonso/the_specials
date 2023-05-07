@@ -68,9 +68,7 @@ export class FilterPreferencesComponent implements OnInit {
   }
   async setFilters() {
     const stateUser = this.state.getValue()?.userData?.data;
-    this.formGroup.patchValue({target_account_type: 'special'})
-    console.log(this.formGroup.value);
-    
+    this.formGroup.patchValue({target_account_type: 'special'})    
     const data = await this.updateDataService.post(this.formGroup.value, stateUser.id).toPromise();
     this.snackBarService.openSnackbarSuccess(
       this.dataTexts.snacksBars.successSaveFilters.mensage,
