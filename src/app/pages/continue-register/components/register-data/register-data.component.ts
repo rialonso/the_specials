@@ -240,7 +240,7 @@ export class RegisterDataComponent implements OnInit {
         ...this.formGroup.value,
         target_gender: this.changeTargetGender()
       }
-
+      console.log(disabilitys);
       if (this.state.getValue()?.registerData?.account_type === EnumUserType.SPECIAL) {
         updateData = {
           ...updateData,
@@ -275,7 +275,7 @@ export class RegisterDataComponent implements OnInit {
     let newArrayValue = [];
     if (value) {
       value.forEach(element => {
-        newArrayValue.push(  {id: element});
+        newArrayValue.push({id: element});
       });
     }
 
