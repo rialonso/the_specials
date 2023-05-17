@@ -13,6 +13,7 @@ import { ChangePasswordComponent } from '../../components/dialogs/change-passwor
 import { UseOfTermsComponent } from '../../components/dialogs/use-of-terms/use-of-terms.component';
 import { PrivacyPolicyComponent } from '../../components/dialogs/privacy-policy/privacy-policy.component';
 import { DevoteePlusComponent } from '../../components/dialogs/devotee-plus/devotee-plus.component';
+import { NotSpecialAccoutComponent } from '../../components/dialogs/not-special-accout/not-special-accout.component';
 
 @Injectable({
   providedIn: 'root'
@@ -166,6 +167,20 @@ export class DialogsService {
         width: 'calc(80%)',
         maxWidth: '1100px',
         panelClass: 'profile-container',
+      },
+    );
+    const smallDialogSubscription = this.isExtraSmall.subscribe(size => {
+      size.matches ? modal.updateSize('100vw', '100vh'): undefined ;
+    });
+    return modal;
+  }
+  openNotSpecial() {
+    const modal =  this.dialog.open(
+      NotSpecialAccoutComponent,
+      {
+        width: 'calc(80%)',
+        maxWidth: '1100px',
+        panelClass: 'not-special',
       },
     );
     const smallDialogSubscription = this.isExtraSmall.subscribe(size => {

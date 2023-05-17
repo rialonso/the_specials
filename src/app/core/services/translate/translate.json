@@ -615,8 +615,11 @@
     "hours" : "horas",
     "hour" : "hora",
     "minutes": "minutos",
-    "minute": "minuto"
-
+    "minute": "minuto",
+    "modalNotSpecial": {
+      "title": "Essa conta é do tipo Devotee",
+      "text": "Por favor acesse o aplicativo Devotee"
+    }
 
 
   },
@@ -1227,7 +1230,11 @@
     "hours" : "hours",
     "hour" : "hour",
     "minutes": "minutes",
-    "minute": "minute"
+    "minute": "minute",
+    "modalNotSpecial": {
+      "title": "This account is a Devotee",
+      "text": "Please access the app Devotee"
+    }
 
   }
 }

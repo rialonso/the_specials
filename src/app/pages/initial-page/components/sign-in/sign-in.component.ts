@@ -19,6 +19,7 @@ import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 import { ISignInGoogle } from 'src/app/shared/model/others-sign-in/sign-in.model';
 import { LoginGoogleService } from 'src/app/core/services/others-sign-in/login-google/login-google.service';
 import { VerifyStageRegisterDataService } from 'src/app/shared/functions/verify-stage-register-data/verify-stage-register-data.service';
+import { EnumUserType } from 'src/app/shared/enum/user-types/user-type.enum';
 
 @Component({
   selector: 'app-sign-in',
@@ -80,6 +81,12 @@ export class SignInComponent implements OnInit {
       this.loading = true;
       const signInData: IUserData.RootObject = await this.signInService.post(this.formGroup.value).toPromise();
       if (signInData?.status) {
+        if (signInData.data.account_type === EnumUserType.DEVOTEE) {
+          this.dialogsService.openNotSpecial();
+          localStorage.clear();
+          this.loading = false;
+          return false;
+        }
         const userProfile: IUserData.RootObject = await this.userProfileService.get(signInData.data.id).toPromise();
         this.stateManagementFuncServices.funcAddAllDataUser({access_token: signInData.access_token, ...userProfile});
         this.verifyStageRegisterDataService.redirectRouteWithDataRegistered();
