@@ -29,11 +29,11 @@
       box-sizing: border-box;
       flex-direction: column;
       margin-top: 20px;
-      @media screen and(max-width: $epecific-mobile) {
+      @media screen and (max-width: $epecific-mobile) {
       }
       img {
         max-width: 115px;
-        @media screen and(max-width: $epecific-mobile) {
+        @media screen and (max-width: $epecific-mobile) {
           max-width: 5rem;
         }
       }

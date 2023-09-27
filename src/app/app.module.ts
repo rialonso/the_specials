@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { IConfig, NgxMaskModule } from "ngx-mask";
 import { AuthGuardService } from "./core/guards/auth-guard/auth.guard.service";
-import { GoogleLoginProvider } from "angularx-social-login";
+import { GoogleLoginProvider, SocialAuthService } from '@abacritt/angularx-social-login';
 const maskConfig: Partial<IConfig> = {
   validation: false,
 };

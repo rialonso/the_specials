@@ -47,19 +47,27 @@
     <button class="button third" (click)="navigateTo(routesEnum.PRE_REGISTER)">
       {{dataTexts.buttonsSignin.btnRegister}}
     </button>
-    <!-- <div class="others-logins">
+    <div class="others-logins">
       <p class="color-blue-dark mtb-15px">{{dataTexts.or}}</p>
       <div class="container-buttons-others">
-        <div class="button icon-text" id="btn-qrcode" (click)="openQrSignIn()">
+        <!-- <div class="button icon-text" id="btn-qrcode" (click)="openQrSignIn()">
           <span>{{dataTexts.buttonsSignin.btnQrCode}}</span>
           <mat-icon svgIcon="icon_qr_code" class="size-18"></mat-icon>
-        </div>
-        <div class="button icon-text" (click)="loginWithGoogle()">
-          <mat-icon svgIcon="logo_google" class="size-18"></mat-icon>
-          <span>{{dataTexts.buttonsSignin.btnGoogle}}</span>
-        </div>
+        </div> -->
+
+      <!-- <div class="" id="google-button"></div> -->
+      <asl-google-signin-button
+        type='standard'
+        size='large'
+        theme='outline'
+        shape="pill"
+        >
+
+      </asl-google-signin-button>
+
+
       </div>
-    </div> -->
+    </div>
     <!-- <p class="infos-about-app color-blue-dark mt-15px">
       {{dataTexts.txtPrivacyAndTerms}}
       <span

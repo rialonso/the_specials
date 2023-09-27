@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SignInRoutingModule } from './sign-in-rounting.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
-import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
+import { GoogleLoginProvider, SocialAuthService, SocialLoginModule } from '@abacritt/angularx-social-login';
 
 
 @NgModule({
@@ -15,6 +15,7 @@ import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
     SignInRoutingModule,
     SharedModule,
     MatDialogModule,
+    SocialLoginModule
   ],
   declarations: [SignInComponent],
   exports: [],
